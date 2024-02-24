@@ -3,6 +3,6 @@ import styles from "./page.module.css";
 
 export default function Home() {
   return (
-    <h1>Comming soon.....</h1>
+    <h1>Comming soon..... Stay tuned</h1>
   );
 }

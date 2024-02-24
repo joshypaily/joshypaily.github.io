@@ -3,7 +3,7 @@ import { Container } from "@mui/material";
 export default function Home() {
   return (
     <Container>
-      users
+      My achivements are as follows
     </Container>
   );
 }
