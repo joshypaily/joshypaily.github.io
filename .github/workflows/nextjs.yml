@@ -81,10 +81,12 @@ jobs:
         run: echo ${{ steps.detect-package-manager.outputs.runner }}
       - name: view current folder
         run: ls -al
-      - name: view out folder
-        run: ls out -al
+      # - name: view out folder
+      #   run: ls out -al
       - name: run npm build
         run: npm run build
+      - name: view current folder
+        run: ls -al
       - name: view out folder
         run: ls out -al  
       - name: Upload artifact
