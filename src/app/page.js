@@ -16,8 +16,8 @@ export default function Home() {
       flexDirection = "row"
       sx={{ minHeight: '100vh' }}
     >
-      <Grid item xs={1} >
-        <h1>Inprogress</h1>
+      <Grid item xs={4} >
+        <h1>Site under construction</h1>
       </Grid>
       <Grid item xs={1}>
         <CircularProgress />
