@@ -77,12 +77,16 @@ jobs:
         run: ${{ steps.detect-package-manager.outputs.manager }} ${{ steps.detect-package-manager.outputs.command }}
       - name: Build with Next.js
         run: ${{ steps.detect-package-manager.outputs.runner }} next build
+      - name: echo package manger
+        run: echo ${{ steps.detect-package-manager.outputs.runner }}
       - name: view current folder
         run: ls -al
       - name: view out folder
         run: ls out -al
-      - name: cat index file
-        run: cat out/index.html
+      - name: run npm build
+        run: npm run build
+      - name: view out folder
+        run: ls out -al  
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v3
         with:
