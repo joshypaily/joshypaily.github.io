@@ -4,8 +4,8 @@ import CssBaseline from '@mui/material/CssBaseline';
 import Grid from '@mui/material/Grid';
 import Container from '@mui/material/Container';
 import { createTheme, ThemeProvider } from '@mui/material/styles';
-import MainFeaturedPost from '@/component/MainFeaturedPost';
-import FeaturedPost from '@/component/FeaturedPost';
+import MainCardPost from '@/component/MainCardPost';
+import CardPost from '@/component/CardPost';
 import Main from '@/component/Main';
 import Footer from '@/component/Footer';
 import Header from '@/component/Header';
@@ -20,6 +20,7 @@ export default function Experience() {
         <Header/>
         <main>
         Experience
+
         </main>
       </Container>
       <Footer

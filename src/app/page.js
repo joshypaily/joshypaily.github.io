@@ -4,13 +4,13 @@ import CssBaseline from '@mui/material/CssBaseline';
 import Grid from '@mui/material/Grid';
 import Container from '@mui/material/Container';
 import { createTheme, ThemeProvider } from '@mui/material/styles';
-import MainFeaturedPost from '@/component/MainFeaturedPost';
-import FeaturedPost from '@/component/FeaturedPost';
+import MainCardPost from '@/component/MainCardPost';
+import CardPost from '@/component/CardPost';
 import Main from '@/component/Main';
 import Footer from '@/component/Footer';
 import Header from '@/component/Header';
 
-const mainFeaturedPost = {
+const mainCardPost = {
   title: 'Title of a longer featured blog post',
   description:
     "Multiple lines of text that form the lede, informing new readers quickly and efficiently about what's most interesting in this post's contents.",
@@ -19,7 +19,7 @@ const mainFeaturedPost = {
   linkText: 'Continue reading…',
 };
 
-const featuredPosts = [
+const cardPosts = [
   {
     title: 'Featured post',
     date: 'Nov 12',
@@ -48,13 +48,12 @@ export default function Home() {
       <Container maxWidth="lg">
         <Header title="Joshy Paily- Senior Software enginner" />
         <main>
-          <MainFeaturedPost post={mainFeaturedPost} />
+          <MainCardPost post={mainCardPost} />
           <Grid container spacing={4}>
-            {featuredPosts.map((post) => (
-              <FeaturedPost key={post.title} post={post} />
+            {cardPosts.map((post) => (
+              <CardPost key={post.title} post={post} />
             ))}
           </Grid>
-         
         </main>
       </Container>
       <Footer
