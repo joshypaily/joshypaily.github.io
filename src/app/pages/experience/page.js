@@ -17,7 +17,6 @@ export default function Experience() {
     <ThemeProvider theme={defaultTheme}>
       <CssBaseline />
       <Container maxWidth="lg">
-        <Header/>
         <main>
         Experience
 
