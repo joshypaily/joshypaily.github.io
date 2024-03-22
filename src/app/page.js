@@ -43,27 +43,24 @@ const defaultTheme = createTheme();
 
 export default function Home() {
   return (
-
-    <h1>main page.js</h1>
-    // <ThemeProvider theme={defaultTheme}>
-     
-    //   <CssBaseline />
-    //   <Container maxWidth="lg">
-    //     {/* <Header title="Joshy Paily- Senior Software enginner" /> */}
-    //     <main>
-    //       <MainCardPost post={mainCardPost} />
-    //       <Grid container spacing={4}>
-    //         {cardPosts.map((post) => (
-    //           <CardPost key={post.title} post={post} />
-    //         ))}
-    //       </Grid>
-    //     </main>
-    //   </Container>
-    //   <Footer
-    //     title=""
-    //     description=""
-    //   />
-    // </ThemeProvider>
+    <ThemeProvider theme={defaultTheme}>
+      <CssBaseline />
+      <Container maxWidth="lg">
+        <Header title="Joshy Paily- Senior Software enginner" />
+        <main>
+          <MainCardPost post={mainCardPost} />
+          <Grid container spacing={4}>
+            {cardPosts.map((post) => (
+              <CardPost key={post.title} post={post} />
+            ))}
+          </Grid>
+        </main>
+      </Container>
+      <Footer
+        title=""
+        description=""
+      />
+    </ThemeProvider>
   );
 }
 

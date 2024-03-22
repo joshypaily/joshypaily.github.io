@@ -8,8 +8,8 @@ import Typography from '@mui/material/Typography';
 import Link from '@mui/material/Link';
 
 const sections = [
-  { title: 'About', url: '/pages' },
-  { title: 'Experience', url: '/pages/experience' },
+  { title: 'About', url: '/' },
+  { title: 'Experience', url: '/experience' },
   { title: 'Projects', url: '/projects' },
   { title: 'Skills', url: '/skills' },
   { title: 'Achievements', url: '/achievements' },
