@@ -5,6 +5,7 @@ import Tabs from '@mui/material/Tabs';
 import Tab from '@mui/material/Tab';
 import Typography from '@mui/material/Typography';
 import Box from '@mui/material/Box';
+import Divider from '@mui/material/Divider';
 
 
 const sections = [
@@ -78,12 +79,16 @@ export default function BasicTabs() {
             <Tab 
               label={section.title}
               href={section.url}
+              key={section.title}
             >
             </Tab>  
           ))}
         </Tabs>
       </Box>
+      <Divider  variant="middle" flexItem />
+      <br/>
     </Box>
+    
   );
 }
 
