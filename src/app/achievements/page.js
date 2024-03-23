@@ -4,29 +4,38 @@ import CssBaseline from '@mui/material/CssBaseline';
 import Grid from '@mui/material/Grid';
 import Container from '@mui/material/Container';
 import { createTheme, ThemeProvider } from '@mui/material/styles';
-import MainFeaturedPost from '@/component/MainCardPost';
-import FeaturedPost from '@/component/MainCarrd';
-import Main from '@/component/Main';
-import Footer from '@/component/Footer';
 import Header from '@/component/Header';
+import CircularProgress from '@mui/material/CircularProgress';
+
+
 
 const defaultTheme = createTheme();
 
-export default function Achievements() {
-  return(
+export default function Home() {
+  return (
     <ThemeProvider theme={defaultTheme}>
       <CssBaseline />
       <Container maxWidth="lg">
-        <Header/>
+        <Header title="Joshy Paily- Senior Software enginner" />
         <main>
-        My achievements are as follows....
+        <Grid
+          container
+          spacing={0}
+          direction="column"
+          alignItems="center"
+          justifyContent="center"
+          flexDirection = "row"
+          sx={{ minHeight: '59vh' }}
+        >
+          <Grid item xs={4} >
+            <h1>Site under construction</h1>
+          </Grid>
+          <Grid item xs={1}>
+            <CircularProgress />
+          </Grid>
+        </Grid>
         </main>
       </Container>
-      <Footer
-        title=""
-        description=""
-      />
     </ThemeProvider>
   );
-   
 }

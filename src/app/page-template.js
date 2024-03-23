@@ -11,12 +11,12 @@ import Footer from '@/component/Footer';
 import Header from '@/component/Header';
 
 const mainCardPost = {
-  title: 'Title of a longer featured blog post',
+  title: 'About',
   description:
-    "Multiple lines of text that form the lede, informing new readers quickly and efficiently about what's most interesting in this post's contents.",
+    `5 years experienced software engineer with a demonstrated history of working in the information technology and services industry. Experience in Java, Kotlin, spring boot, micro service.Possessing expertise in developing applications comprehensively, spanning from user interface to backend implementation. Strong experience in all layers from UI to database, system design, system analysis & implementation with clean code guidelines.`,
   image: 'https://source.unsplash.com/random?wallpapers',
-  imageText: 'main image description',
-  linkText: 'Continue reading…',
+  //imageText: 'main image description',
+  //linkText: 'Continue reading…',
 };
 
 const cardPosts = [

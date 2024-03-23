@@ -1,11 +1,11 @@
+import Toolbar from '@mui/material/Toolbar';
 import * as React from 'react';
 import PropTypes from 'prop-types';
-import Toolbar from '@mui/material/Toolbar';
-import Button from '@mui/material/Button';
-import IconButton from '@mui/material/IconButton';
-import SearchIcon from '@mui/icons-material/Search';
+import Tabs from '@mui/material/Tabs';
+import Tab from '@mui/material/Tab';
 import Typography from '@mui/material/Typography';
-import Link from '@mui/material/Link';
+import Box from '@mui/material/Box';
+
 
 const sections = [
   { title: 'About', url: '/' },
@@ -19,12 +19,48 @@ const sections = [
 
 const title="Joshy Paily- Senior Software enginner";
 
-function Header() {
+function CustomTabPanel(props) {
+  const { children, value, index, ...other } = props;
 
   return (
-    <React.Fragment>
-      <Toolbar sx={{ borderBottom: 1, borderColor: 'divider' }}>
-        <Typography
+    <div
+      role="tabpanel"
+      hidden={value !== index}
+      id={`simple-tabpanel-${index}`}
+      {...other}
+    >
+      {value === index && (
+        <Box sx={{ p: 3 }}>
+          <Typography>{children}</Typography>
+        </Box>
+      )}
+    </div>
+  );
+}
+
+CustomTabPanel.propTypes = {
+  children: PropTypes.node,
+  index: PropTypes.number.isRequired,
+  value: PropTypes.number.isRequired,
+};
+
+function a11yProps(index) {
+  return {
+    id: `simple-tab-${index}`
+  };
+}
+
+export default function BasicTabs() {
+  const [value, setValue] = React.useState(0);
+  const handleChange = (event, newValue) => {
+    setValue(newValue);
+  };
+
+  return (
+    <Box sx={{ width: '100%' }}>
+      <Box sx={{ borderBottom: 1, borderColor: 'divider' }}>
+        <Toolbar sx={{ borderBottom: 1, borderColor: 'divider' }}>
+         <Typography
           component="h2"
           variant="h5"
           color="inherit"
@@ -34,30 +70,20 @@ function Header() {
         >
           {title}
         </Typography>
-        <IconButton>
-          <SearchIcon />
-        </IconButton>
       </Toolbar>
-      <Toolbar
-        component="nav"
-        variant="dense"
-        sx={{ justifyContent: 'space-between', overflowX: 'auto' }}
-      >
-        {sections.map((section) => (
-          <Link
-            color="inherit"
-            noWrap
-            key={section.title}
-            variant="body2"
-            href={section.url}
-            sx={{ p: 1, flexShrink: 0 }}
-          >
-            {section.title}
-          </Link>
-        ))}
-      </Toolbar>
-    </React.Fragment>
+        <Tabs value={value} onChange={handleChange} 
+        textColor="inherit"
+        >
+          {sections.map((section) => (
+            <Tab 
+              label={section.title}
+              href={section.url}
+            >
+            </Tab>  
+          ))}
+        </Tabs>
+      </Box>
+    </Box>
   );
 }
 
-export default Header;

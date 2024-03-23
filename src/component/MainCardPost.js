@@ -5,6 +5,11 @@ import Typography from '@mui/material/Typography';
 import Grid from '@mui/material/Grid';
 import Link from '@mui/material/Link';
 import Box from '@mui/material/Box';
+import BottomNavigation from '@mui/material/BottomNavigation';
+import BottomNavigationAction from '@mui/material/BottomNavigationAction';
+import RestoreIcon from '@mui/icons-material/Restore';
+import FavoriteIcon from '@mui/icons-material/Favorite';
+import LocationOnIcon from '@mui/icons-material/LocationOn';
 
 function MainCardPost(props) {
   const { post } = props;
@@ -35,7 +40,15 @@ function MainCardPost(props) {
         }}
       />
       <Grid container>
-        <Grid item md={6}>
+        <Grid item md={4}>
+        <img
+                srcSet={`/joshy.jpeg?w=164&h=164&fit=crop&auto=format&dpr=2 2x`}
+                src={`/joshy.jpeg?w=164&h=164&fit=crop&auto=format`}
+                style={{maxWidth : '100%'}}
+                loading="lazy"
+              />
+        </Grid>
+        <Grid item md={8}>
           <Box
             sx={{
               position: 'relative',
@@ -43,15 +56,15 @@ function MainCardPost(props) {
               pr: { md: 0 },
             }}
           >
-            <Typography component="h1" variant="h3" color="inherit" gutterBottom>
+            <Typography component="h5" variant="h4" color="inherit" gutterBottom>
               {post.title}
             </Typography>
-            <Typography variant="h5" color="inherit" paragraph>
+            <Typography variant="h6" color="inherit" paragraph>
               {post.description}
             </Typography>
-            <Link variant="subtitle1" href="#">
+            {/* <Link variant="subtitle1" href="#">
               {post.linkText}
-            </Link>
+            </Link> */}
           </Box>
         </Grid>
       </Grid>
@@ -70,3 +83,19 @@ MainCardPost.propTypes = {
 };
 
 export default MainCardPost;
+
+
+
+// <Box sx={{ width: 500 }}>
+// <BottomNavigation
+//   showLabels
+//   value={value}
+//   onChange={(event, newValue) => {
+//     setValue(newValue);
+//   }}
+// >
+//   <BottomNavigationAction label="Recents" icon={<RestoreIcon />} />
+//   <BottomNavigationAction label="Favorites" icon={<FavoriteIcon />} />
+//   <BottomNavigationAction label="Nearby" icon={<LocationOnIcon />} />
+// </BottomNavigation>
+// </Box>
