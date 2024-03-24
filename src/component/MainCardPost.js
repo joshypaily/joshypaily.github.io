@@ -6,7 +6,20 @@ import Grid from '@mui/material/Grid';
 import Box from '@mui/material/Box';
 
 function MainCardPost(props) {
-  const { post } = props;
+  const { post: card } = props;
+
+
+  let leftSection;
+  if (card.isLeftImageRequired) {
+    leftSection = <Grid item md={card.leftMd}>
+      <img
+              srcSet={card.leftImageSrcSet}
+              src={card.leftImageSrc}
+              style={{maxWidth : '100%'}}
+              loading="lazy"
+            />
+    </Grid>
+  }
 
   return (
     <Paper
@@ -18,11 +31,11 @@ function MainCardPost(props) {
         backgroundSize: 'cover',
         backgroundRepeat: 'no-repeat',
         backgroundPosition: 'center',
-        backgroundImage: `url(${post.image})`,
+        backgroundImage: `url(${card.backgroundImage})`,
       }}
     >
       {/* Increase the priority of the hero background image */}
-      {<img style={{ display: 'none' }} src={post.image} alt={post.imageText} />}
+      {<img style={{ display: 'none' }} src={card.backgroundImage}/>}
       <Box
         sx={{
           position: 'absolute',
@@ -34,15 +47,19 @@ function MainCardPost(props) {
         }}
       />
       <Grid container>
-        <Grid item md={4}>
-        <img
-                srcSet={`/joshy.jpeg?w=164&h=164&fit=crop&auto=format&dpr=2 2x`}
-                src={`/joshy.jpeg?w=164&h=164&fit=crop&auto=format`}
-                style={{maxWidth : '100%'}}
-                loading="lazy"
-              />
-        </Grid>
-        <Grid item md={8}>
+
+        {/* if (card.isLeftImageRequired) {
+          <Grid item md={card.leftMd}>
+            <img
+                    srcSet={card.leftImageSrcSet}
+                    src={card.leftImageSrc}
+                    style={{maxWidth : '100%'}}
+                    loading="lazy"
+                  />
+          </Grid>
+        } */}
+        {leftSection} 
+        <Grid item md={card.rightMd}>
           <Box
             sx={{
               position: 'relative',
@@ -51,10 +68,10 @@ function MainCardPost(props) {
             }}
           >
             <Typography component="h5" variant="h4" color="inherit" gutterBottom>
-              {post.title}
+              {card.title}
             </Typography>
             <Typography variant="h6" color="inherit" paragraph>
-              {post.description}
+              {card.description}
             </Typography>
             {/* <Link variant="subtitle1" href="#">
               {post.linkText}
@@ -69,10 +86,13 @@ function MainCardPost(props) {
 MainCardPost.propTypes = {
   post: PropTypes.shape({
     description: PropTypes.string.isRequired,
-    image: PropTypes.string.isRequired,
-    imageText: PropTypes.string.isRequired,
-    linkText: PropTypes.string.isRequired,
+    backgroundImage: PropTypes.string.isRequired,
     title: PropTypes.string.isRequired,
+    leftImageSrcSet: PropTypes.string,
+    leftImageSrc: PropTypes.string,
+    isLeftImageRequired: PropTypes.bool,
+    leftMd: PropTypes.number,
+    rightMd: PropTypes.number,
   }).isRequired,
 };
 
