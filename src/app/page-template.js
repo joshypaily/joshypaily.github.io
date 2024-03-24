@@ -4,7 +4,7 @@ import CssBaseline from '@mui/material/CssBaseline';
 import Grid from '@mui/material/Grid';
 import Container from '@mui/material/Container';
 import { createTheme, ThemeProvider } from '@mui/material/styles';
-import MainCardPost from '@/component/MainCardPost';
+import FullCard from '@/component/MainCardPost';
 import CardPost from '@/component/CardPost';
 import Main from '@/component/Main';
 import Footer from '@/component/Footer';
@@ -48,7 +48,7 @@ export default function Home() {
       <Container maxWidth="lg">
         <Header title="Joshy Paily- Senior Software enginner" />
         <main>
-          <MainCardPost post={mainCardPost} />
+          <FullCard post={mainCardPost} />
           <Grid container spacing={4}>
             {cardPosts.map((post) => (
               <CardPost key={post.title} post={post} />
