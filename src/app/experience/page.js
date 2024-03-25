@@ -6,7 +6,6 @@ import Container from '@mui/material/Container';
 import Header from '@/component/Header';
 import FullCard from '@/component/MainCardPost';
 import CardPost from '@/component/CardPost';
-import { createTheme, ThemeProvider } from '@mui/material/styles';
 
 
 const mainCardPost = {
@@ -40,25 +39,21 @@ const cardPosts = [
   }
 ];
 
-const defaultTheme = createTheme();
 
 export default function Home() {
   return (
-    <ThemeProvider theme={defaultTheme}>
-      <CssBaseline />
-      <Container maxWidth="lg">
-        <Header title="Joshy Paily- Senior Software enginner" />
-        <main>
-          {/* <FullCard post={mainCardPost} /> */}
-          <Grid container spacing={4}>
-            {cardPosts.map((post) => (
-              <CardPost key={post.title} post={post} />
-            ))}
-          </Grid>
-  
-          
-        </main>
-      </Container>
-    </ThemeProvider>
+    <Container maxWidth="lg">
+      <Header title="Joshy Paily- Senior Software enginner" />
+      <main>
+        {/* <FullCard post={mainCardPost} /> */}
+        <Grid container spacing={4}>
+          {cardPosts.map((post) => (
+            <CardPost key={post.title} post={post} />
+          ))}
+        </Grid>
+
+        
+      </main>
+    </Container>
   );
 }

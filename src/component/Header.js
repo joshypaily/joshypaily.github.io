@@ -6,7 +6,7 @@ import Tab from '@mui/material/Tab';
 import Typography from '@mui/material/Typography';
 import Box from '@mui/material/Box';
 import Divider from '@mui/material/Divider';
-
+import Link from '@/component/Link';
 
 const sections = [
   { title: 'About', url: '/' },
@@ -18,20 +18,15 @@ const sections = [
   { title: 'Contact', url: '/contact' },
 ];
 
-const title="Joshy Paily- Senior Software enginner";
+const title = 'Joshy Paily- Senior Software enginner';
 
 function CustomTabPanel(props) {
   const { children, value, index, ...other } = props;
 
   return (
-    <div
-      role="tabpanel"
-      hidden={value !== index}
-      id={`simple-tabpanel-${index}`}
-      {...other}
-    >
+    <div role="tabpanel" hidden={value !== index} id={`simple-tabpanel-${index}`} {...other}>
       {value === index && (
-        <Box sx={{ p: 3 }}>
+        <Box sx={{ p: 6 }}>
           <Typography>{children}</Typography>
         </Box>
       )}
@@ -42,14 +37,8 @@ function CustomTabPanel(props) {
 CustomTabPanel.propTypes = {
   children: PropTypes.node,
   index: PropTypes.number.isRequired,
-  value: PropTypes.number.isRequired,
+  value: PropTypes.number.isRequired
 };
-
-function a11yProps(index) {
-  return {
-    id: `simple-tab-${index}`
-  };
-}
 
 export default function BasicTabs() {
   const [value, setValue] = React.useState(0);
@@ -61,34 +50,29 @@ export default function BasicTabs() {
     <Box sx={{ width: '100%' }}>
       <Box sx={{ borderBottom: 1, borderColor: 'divider' }}>
         <Toolbar sx={{ borderBottom: 1, borderColor: 'divider' }}>
-         <Typography
-          component="h2"
-          variant="h5"
-          color="inherit"
-          align="center"
-          noWrap
-          sx={{ flex: 1 }}
-        >
-          {title}
-        </Typography>
-      </Toolbar>
-        <Tabs value={value} onChange={handleChange} 
-        textColor="inherit"
-        >
+          <Typography
+            component="h2"
+            variant="h5"
+            color="inherit"
+            align="center"
+            noWrap
+            sx={{ flex: 1 }}>
+            {title}
+          </Typography>
+        </Toolbar>
+        <Tabs value={value} onChange={handleChange} textColor="inherit">
           {sections.map((section) => (
-            <Tab 
-              label={section.title}
-              href={section.url}
-              key={section.title}
-            >
-            </Tab>  
+            <Tab label={section.title} key={section.title}>
+              <Link href="{section.title}" color="secondary">
+                dddddd
+              </Link>
+            </Tab>
           ))}
         </Tabs>
+        <br />
       </Box>
-      <Divider  variant="middle" flexItem />
-      <br/>
+      <Divider variant="middle" flexItem />
+      <Divider />
     </Box>
-    
   );
 }
-
