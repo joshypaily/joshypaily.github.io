@@ -14,7 +14,7 @@ import { usePathname } from "next/navigation";
 const sections = [
   { title: "About", url: "/" },
   { title: "Experience", url: "/experience" },
-  { title: "Projects", url: "/projects" },
+  //{ title: "Projects", url: "/projects" },
   { title: "Skills", url: "/skills" },
   { title: "Achievements", url: "/achievements" },
   { title: "Education", url: "/education" },
@@ -24,7 +24,6 @@ const sections = [
 const title = "Joshy Paily- Senior Software enginner";
 
 export default function NavBar() {
-  console.log("NavBar callaed from "+usePathname());
   let value;
   for (let i = 0; i < sections.length; i++) {
     if (sections[i].url === usePathname()) {
@@ -49,7 +48,7 @@ export default function NavBar() {
         </Toolbar>
         <Tabs value={value} textColor="inherit">
           {sections.map((section) => (
-            <Link href={section.url} key={section.title} >
+            <Link href={section.url} key={section.title}>
               <Tab label={section.title} />
             </Link>
           ))}

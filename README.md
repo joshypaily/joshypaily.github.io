@@ -14,7 +14,7 @@ pnpm dev
 bun dev
 ```
 
-Verify static page build  page-verification
+Verify static page build (verification)
 Run 
 ```bash
 npx --no-install next build

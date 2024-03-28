@@ -6,15 +6,12 @@ import Card from "@mui/material/Card";
 import CardActionArea from "@mui/material/CardActionArea";
 import CardContent from "@mui/material/CardContent";
 import List from "@mui/material/List";
-import ToggleButtonGroup from "@mui/material/ToggleButtonGroup";
-import Button from "@mui/material/Button";
-import Stack from "@mui/material/Stack";
 import { ListItem, ListItemButton, ListItemIcon, ListItemText } from "@mui/material";
 import StarIcon from "@mui/icons-material/Star";
 
 function CardPost(props) {
   const { post: card } = props;
-
+  console.log("card post called");
   return (
     <Grid item xs={12}>
       <CardActionArea component="a" href="#">
@@ -27,8 +24,8 @@ function CardPost(props) {
               {card.subTitle}
             </Typography>
             <List>
-              {card.description.map((description) => (
-                <ListItem disablePadding sx={{ display: "list-item" }} key="l">
+              {card.description.map((description, i) => (
+                <ListItem disablePadding sx={{ display: "list-item" }} key={"des" + i + card.key}>
                   <ListItemButton>
                     <ListItemIcon>
                       <StarIcon />
@@ -63,7 +60,8 @@ CardPost.propTypes = {
     description: PropTypes.array.isRequired,
     backgroundImage: PropTypes.string.isRequired,
     //imageLabel: PropTypes.string.isRequired,
-    title: PropTypes.string.isRequired
+    title: PropTypes.string.isRequired,
+    key: PropTypes.string.isRequired
   }).isRequired
 };
 
