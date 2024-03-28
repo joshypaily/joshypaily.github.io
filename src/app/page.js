@@ -4,7 +4,7 @@ import FullCard from "@/component/MainCardPost";
 const mainCardPost = {
   title: "",
   description:
-    "5 years experienced software engineer with a demonstrated history of working in the information technology and services industry. Experience in Java, Kotlin, spring boot, micro service.Possessing expertise in developing applications comprehensively, spanning from user interface to backend implementation. Strong experience in all layers from UI to database, system design, system analysis & implementation with clean code guidelines.",
+    "A software engineer with five years of experience, showcasing a proven track record in the information technology and services sector. Proficient in Java, Kotlin, Spring Boot, and microservices, with a knack for crafting applications from front-end to back-end. Possesses extensive expertise across all development layers, including UI, database, system design, analysis, and implementation, adhering to clean code principles.",
   backgroundImage: "/bg.avif",
   leftImageSrcSet: "/joshy.jpeg?w=164&h=164&fit=crop&auto=format&dpr=2 2x",
   leftImageSrc: "/joshy.jpeg?w=164&h=164&fit=crop&auto=format",

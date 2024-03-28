@@ -14,7 +14,7 @@ import { usePathname } from "next/navigation";
 const sections = [
   { title: "About", url: "/" },
   { title: "Experience", url: "/experience" },
-  //{ title: "Projects", url: "/projects" },
+  { title: "Projects", url: "/projects" },
   { title: "Skills", url: "/skills" },
   { title: "Achievements", url: "/achievements" },
   { title: "Education", url: "/education" },
@@ -37,16 +37,22 @@ export default function NavBar() {
       <Box sx={{ borderBottom: 1, borderColor: "divider" }}>
         <Toolbar sx={{ borderBottom: 1, borderColor: "divider" }}>
           <Typography
-            component="h2"
-            variant="h5"
+            ///component="h2"
+            //variant="h5"
+            fontSize="30"
             color="inherit"
             align="center"
             noWrap
-            sx={{ flex: 1 }}>
+            sx={{ flex: 1, fontSize: 20 }}>
             {title}
           </Typography>
         </Toolbar>
-        <Tabs value={value} textColor="inherit">
+        <Tabs
+          value={value}
+          textcolor="inherit"
+          variant="scrollable"
+          scrollButtons
+          allowScrollButtonsMobile>
           {sections.map((section) => (
             <Link href={section.url} key={section.title}>
               <Tab label={section.title} />

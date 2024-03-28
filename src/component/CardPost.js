@@ -8,10 +8,22 @@ import CardContent from "@mui/material/CardContent";
 import List from "@mui/material/List";
 import { ListItem, ListItemButton, ListItemIcon, ListItemText } from "@mui/material";
 import StarIcon from "@mui/icons-material/Star";
+import Link from "@mui/material/Link";
 
 function CardPost(props) {
   const { post: card } = props;
-  console.log("card post called");
+
+  let linkSection;
+  if (card.isMoreInfoLinkRequired) {
+    linkSection = (
+      <Typography variant="subtitle1" color="primary">
+        <Link href={card.moreInfoLink.url} underline="always" target="_blank">
+          {card.moreInfoLink.label}
+        </Link>
+      </Typography>
+    );
+  }
+
   return (
     <Grid item xs={12}>
       <CardActionArea component="a" href="#">
@@ -38,9 +50,7 @@ function CardPost(props) {
             {/* <Typography variant="subtitle1" paragraph>
               {card.description}
             </Typography> */}
-            {/* <Typography variant="subtitle1" color="primary">
-              Continue reading...
-            </Typography> */}
+            {linkSection}
           </CardContent>
           {/* <CardMedia
             component="img"
@@ -59,9 +69,13 @@ CardPost.propTypes = {
     subTitle: PropTypes.string.isRequired,
     description: PropTypes.array.isRequired,
     backgroundImage: PropTypes.string.isRequired,
-    //imageLabel: PropTypes.string.isRequired,
     title: PropTypes.string.isRequired,
-    key: PropTypes.string.isRequired
+    key: PropTypes.string.isRequired,
+    isMoreInfoLinkRequired: PropTypes.string.isRequired,
+    moreInfoLink: PropTypes.shape({
+      url: PropTypes.string.isRequired,
+      label: PropTypes.string.isRequired
+    }).isRequired
   }).isRequired
 };
 
