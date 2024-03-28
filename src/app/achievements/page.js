@@ -9,6 +9,7 @@ export default function Achievements() {
         {/* {cardPosts.map((post) => (
           <CardPost key={post.title} post={post} />
         ))} */}
+        Development inprogress. Stay tuned..
       </Grid>
     </main>
   );
