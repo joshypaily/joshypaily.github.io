@@ -9,12 +9,12 @@ const cardPosts = [
     title: "Senior software engineer(21/02/2022 to Till date)",
     subTitle: "IBS software, Carnival infopark, Kochi, Kerala, India.",
     description: [
-      "Got Debutant Award",
-      "Got Department Champion Award",
-      "Got Team Champion Award",
-      "Got customer Appreciation",
-      "Architected and created a GRPC endpoint for an existing micro service",
-      "Contributed in IAM services and migration works"
+      "Honored with the Debutant award.",
+      "Received the Department Champion Award.",
+      "Received Team Champion Award.",
+      "Received appreciation from customers.",
+      "Designed and implemented a GRPC endpoint within an established microservice architecture.",
+      "Contributed in Identity and Access Management(IAM) service enhancements and migration initiatives."
     ],
     backgroundImage: "/bg.avif"
   },
@@ -23,10 +23,9 @@ const cardPosts = [
     title: "Software Engineer (14/10/2020 to 18/02/2022)",
     subTitle: "Pinmicro India Pvt Ltd, Infopark phase 2, Kochi, Kerala, India.",
     description: [
-      "Contributed in R&D projetcts",
-      "Developed a middleware for integrating two different third party IOT clouds into the existing RTLS which increased the revenue of the company and added more clients.",
+      "Designed and implemented a middleware solution to seamlessly integrate two distinct third-party IoT clouds with the current RTLS infrastructure, resulting in revenue growth for the company and the acquisition of additional clients.",
       "Developed MQTT messaging integration for Ultra Wide Band technology.",
-      "Done R&D for a middleware used for integrating face detection cameras into the existing RTLS and access control. Successfully integrated two different cameras into RTLS."
+      "Conducted R&D for a middleware for integrating face detection cameras into the existing RTLS and access control systems. Successfully integrated two different camera systems into RTLS."
     ],
     backgroundImage: "https://source.unsplash.com/random?wallpapers"
   },
@@ -36,7 +35,7 @@ const cardPosts = [
     subTitle: " Indocosmo Systems Pvt Ltd, Kadavanthra,  Kochi, Kerala, India.",
     description: [
       "Worked as a full stack developer",
-      "Done R&D and developed a chat application using websocket.",
+      "Conducted R&D and developed a chat application using websocket.",
       "Developed a dynamic chat allocation algorithm for allocating a customer chat to the product support person having less number of concurrent chatting windows."
     ],
     backgroundImage: "https://source.unsplash.com/random?wallpapers"
