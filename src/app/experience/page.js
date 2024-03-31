@@ -16,7 +16,8 @@ const cardPosts = [
       "Designed and implemented a GRPC endpoint within an established microservice architecture.",
       "Contributed in Identity and Access Management(IAM) service enhancements and migration initiatives."
     ],
-    backgroundImage: "/bg.avif"
+    backgroundImage: "/bg.avif",
+    isMoreInfoLinkRequired: false
   },
   {
     key: "cardPost2",
@@ -27,7 +28,8 @@ const cardPosts = [
       "Developed MQTT messaging integration for Ultra Wide Band technology.",
       "Conducted R&D for a middleware for integrating face detection cameras into the existing RTLS and access control systems. Successfully integrated two different camera systems into RTLS."
     ],
-    backgroundImage: "https://source.unsplash.com/random?wallpapers"
+    backgroundImage: "https://source.unsplash.com/random?wallpapers",
+    isMoreInfoLinkRequired: false
   },
   {
     key: "cardPost3",
@@ -38,7 +40,8 @@ const cardPosts = [
       "Conducted R&D and developed a chat application using websocket.",
       "Developed a dynamic chat allocation algorithm for allocating a customer chat to the product support person having less number of concurrent chatting windows."
     ],
-    backgroundImage: "https://source.unsplash.com/random?wallpapers"
+    backgroundImage: "https://source.unsplash.com/random?wallpapers",
+    isMoreInfoLinkRequired: false
   }
 ];
 
