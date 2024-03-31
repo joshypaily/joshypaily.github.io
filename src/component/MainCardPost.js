@@ -8,9 +8,9 @@ import Box from "@mui/material/Box";
 function MainCardPost(props) {
   const { post: card } = props;
 
-  let leftSection;
+  let leftImageSection;
   if (card.isLeftImageRequired) {
-    leftSection = (
+    leftImageSection = (
       <Grid item md={card.leftMd}>
         <img
           srcSet={card.leftImageSrcSet}
@@ -57,7 +57,7 @@ function MainCardPost(props) {
                   />
           </Grid>
         } */}
-        {leftSection}
+        {leftImageSection}
         <Grid item md={card.rightMd}>
           <Box
             sx={{
