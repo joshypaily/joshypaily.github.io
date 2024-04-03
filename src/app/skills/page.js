@@ -118,10 +118,6 @@ export default function SvgIconsColor() {
         </Grid>
         <Grid container direction="column" justifyContent="center" alignItems="center">
           <CodeIcon color="primary" fontSize="large" />
-          Web hosting (PHP and Java),
-        </Grid>
-        <Grid container direction="column" justifyContent="center" alignItems="center">
-          <CodeIcon color="primary" fontSize="large" />
           AWS EC2
         </Grid>
         <Grid container direction="column" justifyContent="center" alignItems="center">
@@ -151,6 +147,10 @@ export default function SvgIconsColor() {
         <Grid container direction="column" justifyContent="center" alignItems="center">
           <CodeIcon color="primary" fontSize="large" />
           GraphQL
+        </Grid>
+        <Grid container direction="column" justifyContent="center" alignItems="center">
+          <CodeIcon color="primary" fontSize="large" />
+          Web hosting(PHP and Java)
         </Grid>
       </Stack>
     </>
