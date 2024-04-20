@@ -1,10 +1,7 @@
 import * as React from "react";
 import Stack from "@mui/material/Stack";
-import CssIcon from "@mui/icons-material/Css";
-import JavascriptIcon from "@mui/icons-material/Javascript";
-import CodeIcon from "@mui/icons-material/Code";
-import StorageIcon from "@mui/icons-material/Storage";
-import { Box, Grid, Divider } from "@mui/joy";
+import { Box, Divider } from "@mui/joy";
+import Chip from "@mui/material/Chip";
 
 export default function SvgIconsColor() {
   return (
@@ -19,26 +16,26 @@ export default function SvgIconsColor() {
         useFlexGap
         flexWrap="wrap"
         padding={2}>
-        <Grid container direction="column" justifyContent="center" alignItems="center">
-          <CodeIcon color="primary" fontSize="large" />
+        {/* <Grid container direction="column" justifyContent="center" alignItems="center">
           Java
         </Grid>
         <Grid container direction="column" justifyContent="center" alignItems="center">
-          <CodeIcon color="primary" fontSize="large" />
           Kotlin
         </Grid>
         <Grid container direction="column" justifyContent="center" alignItems="center">
-          <CodeIcon color="primary" fontSize="large" />
           HTML
         </Grid>
         <Grid container direction="column" justifyContent="center" alignItems="center">
-          <CssIcon color="primary" fontSize="large" />
           CSS
         </Grid>
         <Grid container direction="column" justifyContent="center" alignItems="center">
-          <JavascriptIcon color="primary" fontSize="large" />
           JavaScript
-        </Grid>
+        </Grid> */}
+        <Chip color="primary" label="Java" />
+        <Chip color="primary" label="Kotlin" />
+        <Chip color="primary" label="HTML" />
+        <Chip color="primary" label="CSS" />
+        <Chip color="primary" label="JavaScript" />
       </Stack>
 
       <Box fontcolor="inherit" sx={{ p: 1, border: "1px dashed grey" }}>
@@ -51,14 +48,14 @@ export default function SvgIconsColor() {
         useFlexGap
         flexWrap="wrap"
         padding={2}>
-        <Grid container direction="column" justifyContent="center" alignItems="center">
-          <CodeIcon color="primary" fontSize="large" />
+        {/* <Grid container direction="column" justifyContent="center" alignItems="center">
           Spring Boot
         </Grid>
         <Grid container direction="column" justifyContent="center" alignItems="center">
-          <CodeIcon color="primary" fontSize="large" />
           Spring MVC
-        </Grid>
+        </Grid> */}
+        <Chip color="primary" label="Spring Boot" />
+        <Chip color="primary" label="Spring MVC" />
       </Stack>
       <Box fontcolor="inherit" sx={{ p: 1, border: "1px dashed grey" }}>
         Databases
@@ -70,14 +67,14 @@ export default function SvgIconsColor() {
         useFlexGap
         flexWrap="wrap"
         padding={2}>
-        <Grid container direction="column" justifyContent="center" alignItems="center">
-          <StorageIcon color="primary" fontSize="large" />
+        {/* <Grid container direction="column" justifyContent="center" alignItems="center">
           MySQL DB
         </Grid>
         <Grid container direction="column" justifyContent="center" alignItems="center">
-          <StorageIcon color="primary" fontSize="large" />
           MongoDB
-        </Grid>
+        </Grid> */}
+        <Chip color="primary" label="MySQL DB" />
+        <Chip color="primary" label="MongoDB" />
       </Stack>
       <Box fontcolor="inherit" sx={{ p: 1, border: "1px dashed grey" }}>
         Platforms
@@ -89,22 +86,23 @@ export default function SvgIconsColor() {
         useFlexGap
         flexWrap="wrap"
         padding={2}>
-        <Grid container direction="column" justifyContent="center" alignItems="center">
-          <CodeIcon color="primary" fontSize="large" />
+        {/* <Grid container direction="column" justifyContent="center" alignItems="center">
           Ubuntu
         </Grid>
         <Grid container direction="column" justifyContent="center" alignItems="center">
-          <CodeIcon color="primary" fontSize="large" />
           MacOS
         </Grid>
         <Grid container direction="column" justifyContent="center" alignItems="center">
-          <CodeIcon color="primary" fontSize="large" />
           WindowS
-        </Grid>
+        </Grid> */}
+        <Chip color="primary" label="Ubuntu" />
+        <Chip color="primary" label="MacOS" />
+        <Chip color="primary" label="Windows" />
       </Stack>
       <Box fontcolor="inherit" sx={{ p: 1, border: "1px dashed grey" }}>
         Other
       </Box>
+
       <Stack
         direction="row"
         spacing={{ xs: 1, sm: 2, md: 4 }}
@@ -112,46 +110,46 @@ export default function SvgIconsColor() {
         useFlexGap
         flexWrap="wrap"
         padding={2}>
-        <Grid container direction="column" justifyContent="center" alignItems="center">
-          <CodeIcon color="primary" fontSize="large" />
+        {/* <Grid container direction="column" justifyContent="center" alignItems="center">
           Microservice
         </Grid>
         <Grid container direction="column" justifyContent="center" alignItems="center">
-          <CodeIcon color="primary" fontSize="large" />
           AWS EC2
         </Grid>
         <Grid container direction="column" justifyContent="center" alignItems="center">
-          <CodeIcon color="primary" fontSize="large" />
           Docker
         </Grid>
         <Grid container direction="column" justifyContent="center" alignItems="center">
-          <CodeIcon color="primary" fontSize="large" />
           Git
         </Grid>
         <Grid container direction="column" justifyContent="center" alignItems="center">
-          <CodeIcon color="primary" fontSize="large" />
           GRPC
         </Grid>
         <Grid container direction="column" justifyContent="center" alignItems="center">
-          <CodeIcon color="primary" fontSize="large" />
           REST API
         </Grid>
         <Grid container direction="column" justifyContent="center" alignItems="center">
-          <CodeIcon color="primary" fontSize="large" />
           Splunk
         </Grid>
         <Grid container direction="column" justifyContent="center" alignItems="center">
-          <CodeIcon color="primary" fontSize="large" />
           Apache ActiveMQ
         </Grid>
         <Grid container direction="column" justifyContent="center" alignItems="center">
-          <CodeIcon color="primary" fontSize="large" />
           GraphQL
         </Grid>
         <Grid container direction="column" justifyContent="center" alignItems="center">
-          <CodeIcon color="primary" fontSize="large" />
           Web hosting(PHP and Java)
-        </Grid>
+        </Grid> */}
+        <Chip color="primary" label="Microservice" />
+        <Chip color="primary" label="AWS EC2" />
+        <Chip color="primary" label="Docker" />
+        <Chip color="primary" label="Git" />
+        <Chip color="primary" label="GRPC" />
+        <Chip color="primary" label="REST API" />
+        <Chip color="primary" label="Splunk" />
+        <Chip color="primary" label="Apache ActiveMQ" />
+        <Chip color="primary" label="GraphQL" />
+        <Chip color="primary" label="Web hosting(PHP and Java)" />
       </Stack>
     </>
   );
