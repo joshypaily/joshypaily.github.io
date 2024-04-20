@@ -17,7 +17,7 @@ const cardPosts = [
     key: "cardPost-Hacktrix-2017",
     year: "2017",
     title: "Hacktrix-2017",
-    subTitle: "Coordinated",
+    subTitle: "",
     description: ["Coordinated Hacktrix-2017, an ethical hacking workshop."],
     backgroundImage: "/bg.avif",
     isMoreInfoLinkRequired: false
@@ -36,9 +36,11 @@ const cardPosts = [
   {
     key: "cardPost1-web-design2013",
     year: "2013",
-    title: "Web designing competation",
+    title: "Web Designing Competation",
     subTitle: "First prize",
-    description: ["Got 1st prize in web designing in koothattukulam sub-district IT fair 2013."],
+    description: [
+      "Secured 1st prize for web designing competition in koothattukulam sub-district IT fair conducted on 2013."
+    ],
     backgroundImage: "/bg.avif",
     isMoreInfoLinkRequired: false
   },
@@ -56,18 +58,22 @@ const cardPosts = [
   {
     key: "cardPost1-web-design2012",
     year: "2012",
-    title: "Web designing competation",
+    title: "Web Designing Competation",
     subTitle: "First prize",
-    description: ["Got 1st prize in web designing in koothattukulam sub-district IT fair 2012."],
+    description: [
+      "Secured 1st prize for web designing competition in koothattukulam sub-district IT fair conducted on 2012."
+    ],
     backgroundImage: "/bg.avif",
     isMoreInfoLinkRequired: false
   },
   {
     key: "cardPost1-web-design2011",
     year: "2011",
-    title: "Web designing competation",
+    title: "Web Designing Competation",
     subTitle: "First prize",
-    description: ["Got 1st prize in web designing in koothattukulam sub-district IT fair 2011."],
+    description: [
+      "Secured 1st prize for web designing competition in koothattukulam sub-district IT fair conducted on 2011."
+    ],
     backgroundImage: "/bg.avif",
     isMoreInfoLinkRequired: false
   }
