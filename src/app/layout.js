@@ -2,6 +2,7 @@ import { Inter } from "next/font/google";
 import "./globals.css";
 import { Container } from "@mui/joy";
 import Header from "@/component/NavBar";
+import ResponsiveAppBar from "@/component/ResponsiveAppBar";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -16,7 +17,8 @@ export default function RootLayout({ children }) {
     <html lang="en">
       <body className={inter.className}>
         <Container maxWidth="lg">
-          <Header title="Joshy Paily- Senior Software enginner" />
+          <Header />
+          <ResponsiveAppBar />
           {children}
         </Container>
       </body>
