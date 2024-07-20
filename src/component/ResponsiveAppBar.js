@@ -42,10 +42,6 @@ function ResponsiveAppBar() {
     setAnchorElNav(null);
   };
 
-  const handleCloseUserMenu = () => {
-    setAnchorElUser(null);
-  };
-
   return (
     <AppBar position="static">
       <Container maxWidth="xl" sx={{ borderBottom: 1, backgroundColor: "" }}>
