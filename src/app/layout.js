@@ -1,13 +1,12 @@
 import { Inter } from "next/font/google";
 import "./globals.css";
 import { Container } from "@mui/joy";
-import Header from "@/component/NavBar";
 import ResponsiveAppBar from "@/component/ResponsiveAppBar";
 
 const inter = Inter({ subsets: ["latin"] });
 
 export const metadata = {
-  title: "Joshy-portfolio",
+  title: "Joshy's-portfolio",
   description: ""
 };
 
@@ -17,7 +16,6 @@ export default function RootLayout({ children }) {
     <html lang="en">
       <body className={inter.className}>
         <Container maxWidth="lg">
-          <Header />
           <ResponsiveAppBar />
           {children}
         </Container>
