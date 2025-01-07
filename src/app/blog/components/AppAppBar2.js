@@ -15,9 +15,6 @@ import MenuIcon from "@mui/icons-material/Menu";
 import CloseRoundedIcon from "@mui/icons-material/CloseRounded";
 import Sitemark from "./SitemarkIcon";
 import ColorModeIconDropdown from "../../shared-theme/ColorModeIconDropdown";
-import Link from "next/link";
-import { usePathname } from "next/navigation";
-import ResponsiveAppBar from "@/component/ResponsiveAppBar";
 
 const StyledToolbar = styled(Toolbar)(({ theme }) => ({
   display: "flex",
@@ -35,41 +32,12 @@ const StyledToolbar = styled(Toolbar)(({ theme }) => ({
   padding: "8px 12px"
 }));
 
-const navItemColour = "#000000";
-
-const sections = [
-  { title: "About", url: "/", colour: navItemColour },
-  { title: "Experience", url: "/experience", colour: navItemColour },
-  { title: "Projects", url: "/projects", colour: navItemColour },
-  { title: "Skills", url: "/skills", colour: navItemColour },
-  { title: "Achievements", url: "/achievements", colour: navItemColour },
-  { title: "Education", url: "/education", colour: navItemColour },
-  { title: "Contact", url: "/contact", colour: navItemColour }
-];
-
 export default function AppAppBar() {
   const [open, setOpen] = React.useState(false);
 
   const toggleDrawer = (newOpen) => () => {
     setOpen(newOpen);
   };
-
-  // for (let i = 0; i < sections.length; i++) {
-  //   if (sections[i].url === usePathname()) {
-  //     sections[i].colour = "white";
-  //   } else {
-  //     sections[i].colour = navItemColour;
-  //   }
-  // }
-  // const [anchorElNav, setAnchorElNav] = React.useState(null);
-
-  // const handleOpenNavMenu = (event) => {
-  //   setAnchorElNav(event.currentTarget);
-  // };
-
-  // const handleCloseNavMenu = () => {
-  //   setAnchorElNav(null);
-  // };
 
   return (
     <AppBar
@@ -84,9 +52,9 @@ export default function AppAppBar() {
       <Container maxWidth="lg">
         <StyledToolbar variant="dense" disableGutters>
           <Box sx={{ flexGrow: 1, display: "flex", alignItems: "center", px: 0 }}>
-            {/* <Sitemark /> */}
+            <Sitemark />
             <Box sx={{ display: { xs: "none", md: "flex" } }}>
-              {/* <Button variant="text" color="info" size="small">
+              <Button variant="text" color="info" size="small">
                 Features
               </Button>
               <Button variant="text" color="info" size="small">
@@ -103,15 +71,7 @@ export default function AppAppBar() {
               </Button>
               <Button variant="text" color="info" size="small" sx={{ minWidth: 0 }}>
                 Blog
-              </Button> */}
-              {sections.map((page) => (
-                // <Button key={page.title} onClick={handleCloseNavMenu}>
-                <Button key={page.title} >
-                  <Link href={page.url} key={page.title}>
-                    {page.title}
-                  </Link>
-                </Button>
-              ))}
+              </Button>
             </Box>
           </Box>
           <Box
@@ -152,22 +112,13 @@ export default function AppAppBar() {
                     <CloseRoundedIcon />
                   </IconButton>
                 </Box>
-                {sections.map((page) => (
-                  // onClick={handleCloseNavMenu}
-                  <MenuItem key={page.title} >
-                    <Link href={page.url} key={page.title}>
-                      {page.title}
-                    </Link>
-                  </MenuItem>
-                ))}
-
                 <MenuItem>Features</MenuItem>
                 <MenuItem>Testimonials</MenuItem>
                 <MenuItem>Highlights</MenuItem>
                 <MenuItem>Pricing</MenuItem>
                 <MenuItem>FAQ</MenuItem>
                 <MenuItem>Blog</MenuItem>
-                <Divider sx={{ my: 3 }} /> 
+                <Divider sx={{ my: 3 }} />
                 <MenuItem>
                   <Button color="primary" variant="contained" fullWidth>
                     Sign up
