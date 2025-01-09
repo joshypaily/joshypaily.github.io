@@ -5,10 +5,14 @@ import List from "@mui/material/List";
 import ListItem from "@mui/material/ListItem";
 import Link from "@mui/material/Link";
 import LinkedInIcon from "@mui/icons-material/LinkedIn";
+import { Container } from "@mui/material";
 
 export default function SvgIconsColor() {
   return (
-    <>
+    <Container
+    maxWidth="lg"
+    component="main"
+    sx={{ display: "flex", flexDirection: "column", my: 16, gap: 4 }}>
       <Grid container spacing={2}>
         <Grid item xs={12} md={6}>
           <Typography sx={{ mt: 4, mb: 2 }} variant="h6" component="div">
@@ -24,6 +28,6 @@ export default function SvgIconsColor() {
           </List>
         </Grid>
       </Grid>
-    </>
+    </Container>
   );
 }

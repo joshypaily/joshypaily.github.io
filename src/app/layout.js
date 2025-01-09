@@ -16,7 +16,7 @@ export default function RootLayout({ children, ...props }) {
   return (
     <html lang="en">
       <head>
-        <titile>Joshy's-portfolio</titile>
+        <title>Joshy's-portfolio</title>
       </head>
       <body className={inter.className}>
         <AppTheme {...props}>

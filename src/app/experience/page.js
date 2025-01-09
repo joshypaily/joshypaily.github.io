@@ -2,6 +2,7 @@
 
 import Grid from "@mui/material/Grid";
 import CardPost from "@/component/CardPost";
+import { Container } from "@mui/material";
 
 const cardPosts = [
   {
@@ -47,12 +48,15 @@ const cardPosts = [
 
 export default function Experience() {
   return (
-    <main>
+    <Container
+    maxWidth="lg"
+    component="main"
+    sx={{ display: "flex", flexDirection: "column", my: 16, gap: 4 }}>
       <Grid container spacing={6}>
         {cardPosts.map((post) => (
           <CardPost key={post.title} post={post} />
         ))}
       </Grid>
-    </main>
+    </Container>
   );
 }
