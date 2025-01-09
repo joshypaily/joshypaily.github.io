@@ -1,5 +1,6 @@
 "use client";
 import FullCard from "@/component/MainCardPost";
+import Container from "@mui/material/Container";
 
 const mainCardPost = {
   title: "",
@@ -15,8 +16,11 @@ const mainCardPost = {
 
 export default function Home() {
   return (
-    <main>
+    <Container
+      maxWidth="lg"
+      component="main"
+      sx={{ display: "flex", flexDirection: "column", my: 16, gap: 4 }}>
       <FullCard post={mainCardPost} />
-    </main>
+    </Container>
   );
 }

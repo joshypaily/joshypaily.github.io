@@ -2,10 +2,15 @@ import * as React from "react";
 import Stack from "@mui/material/Stack";
 import { Box, Divider } from "@mui/joy";
 import Chip from "@mui/material/Chip";
+import Container from "@mui/material/Container";
 
 export default function SvgIconsColor() {
   return (
-    <>
+    <Container
+      maxWidth="lg"
+      component="main"
+      sx={{ display: "flex", flexDirection: "column", my: 16, gap: 4 }}>
+
       <Box fontcolor="inherit" sx={{ p: 1, border: "1px dashed grey" }}>
         Technologies known
       </Box>
@@ -151,6 +156,6 @@ export default function SvgIconsColor() {
         <Chip color="primary" label="GraphQL" />
         <Chip color="primary" label="Web hosting(PHP and Java)" />
       </Stack>
-    </>
+    </Container>
   );
 }
