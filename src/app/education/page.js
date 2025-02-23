@@ -39,9 +39,9 @@ const cardPosts = [
 export default function Education() {
   return (
     <Container
-    maxWidth="lg"
-    component="main"
-    sx={{ display: "flex", flexDirection: "column", my: 16, gap: 4 }}>
+      maxWidth="lg"
+      component="main"
+      sx={{ display: "flex", flexDirection: "column", my: 16, gap: 4 }}>
       <Grid container spacing={6}>
         {cardPosts.map((post) => (
           <CardPost key={post.title} post={post} />

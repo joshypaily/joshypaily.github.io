@@ -2,7 +2,7 @@
 #
 # To get started with Next.js see: https://nextjs.org/docs/getting-started
 #
-name: Build Next.js site to Pages
+name: build development branch
 
 on:
   # Runs on pushes targeting the default branch
