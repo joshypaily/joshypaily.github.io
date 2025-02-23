@@ -13,12 +13,8 @@ import MenuItem from "@mui/material/MenuItem";
 import Drawer from "@mui/material/Drawer";
 import MenuIcon from "@mui/icons-material/Menu";
 import CloseRoundedIcon from "@mui/icons-material/CloseRounded";
-import Sitemark from "./SitemarkIcon";
 import ColorModeIconDropdown from "../../shared-theme/ColorModeIconDropdown";
 import Link from "next/link";
-import { usePathname } from "next/navigation";
-import ResponsiveAppBar from "@/component/ResponsiveAppBar";
-
 const StyledToolbar = styled(Toolbar)(({ theme }) => ({
   display: "flex",
   alignItems: "center",
@@ -84,7 +80,6 @@ export default function AppAppBar() {
       <Container maxWidth="lg">
         <StyledToolbar variant="dense" disableGutters>
           <Box sx={{ flexGrow: 1, display: "flex", alignItems: "center", px: 0 }}>
-            {/* <Sitemark /> */}
             <Box sx={{ display: { xs: "none", md: "flex" } }}>
               {/* <Button variant="text" color="info" size="small">
                 Features
@@ -106,7 +101,7 @@ export default function AppAppBar() {
               </Button> */}
               {sections.map((page) => (
                 // <Button key={page.title} onClick={handleCloseNavMenu}>
-                <Button key={page.title} >
+                <Button key={page.title}>
                   <Link href={page.url} key={page.title}>
                     {page.title}
                   </Link>
@@ -148,7 +143,7 @@ export default function AppAppBar() {
                 </Box>
                 {sections.map((page) => (
                   // onClick={handleCloseNavMenu}
-                  <MenuItem key={page.title} >
+                  <MenuItem key={page.title}>
                     <Link href={page.url} key={page.title}>
                       {page.title}
                     </Link>
@@ -161,7 +156,7 @@ export default function AppAppBar() {
                 <MenuItem>Pricing</MenuItem>
                 <MenuItem>FAQ</MenuItem>
                 <MenuItem>Blog</MenuItem>
-                <Divider sx={{ my: 3 }} /> 
+                <Divider sx={{ my: 3 }} />
                 <MenuItem>
                   <Button color="primary" variant="contained" fullWidth>
                     Sign up

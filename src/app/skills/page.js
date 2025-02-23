@@ -10,7 +10,6 @@ export default function SvgIconsColor() {
       maxWidth="lg"
       component="main"
       sx={{ display: "flex", flexDirection: "column", my: 16, gap: 4 }}>
-
       <Box fontcolor="inherit" sx={{ p: 1, border: "1px dashed grey" }}>
         Technologies known
       </Box>

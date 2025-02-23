@@ -10,9 +10,9 @@ import { Container } from "@mui/material";
 export default function SvgIconsColor() {
   return (
     <Container
-    maxWidth="lg"
-    component="main"
-    sx={{ display: "flex", flexDirection: "column", my: 16, gap: 4 }}>
+      maxWidth="lg"
+      component="main"
+      sx={{ display: "flex", flexDirection: "column", my: 16, gap: 4 }}>
       <Grid container spacing={2}>
         <Grid item xs={12} md={6}>
           <Typography sx={{ mt: 4, mb: 2 }} variant="h6" component="div">

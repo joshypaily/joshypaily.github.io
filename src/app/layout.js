@@ -4,11 +4,10 @@ import { Inter } from "next/font/google";
 import "./globals.css";
 import { Container } from "@mui/joy";
 import CssBaseline from "@mui/material/CssBaseline";
-import ResponsiveAppBar from "@/component/ResponsiveAppBar";
-import AppAppBarOriginal from "./blog/components/AppAppBar2";
 import AppAppBar from "./blog/components/AppAppBar";
 import AppTheme from "./shared-theme/AppTheme";
 import Footer from "./blog/components/Footer";
+import PropTypes from "prop-types";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -16,7 +15,7 @@ export default function RootLayout({ children, ...props }) {
   return (
     <html lang="en">
       <head>
-        <title>Joshy's-portfolio</title>
+        <title>Joshy&apos;s-portfolio</title>
       </head>
       <body className={inter.className}>
         <AppTheme {...props}>
@@ -29,3 +28,8 @@ export default function RootLayout({ children, ...props }) {
     </html>
   );
 }
+
+RootLayout.propTypes = {
+  children: PropTypes.node.isRequired,
+  props: PropTypes.object
+};
