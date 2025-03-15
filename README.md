@@ -2,13 +2,27 @@ This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next
 
 ## Getting Started
 
-First, run the development server:
+Install all the dependencies in your project
+```bash
+
+npm install       
+```
+
+Then, run the development server:
 
 ```bash
+
 npm run dev
-# or
+```
+OR
+```bash
+
 yarn dev
-# or
+```
+
+OR
+```bash
+
 pnpm dev
 # or
 bun dev
@@ -17,6 +31,7 @@ bun dev
 Verify static page build (verification)
 Run 
 ```bash
+
 npx --no-install next build
 ```
 
