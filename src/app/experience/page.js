@@ -11,8 +11,9 @@ const cardPosts = [
     subTitle: "IBS software, Carnival infopark, Kochi, Kerala, India.",
     description: [
       "Honored with the Debutant award.",
+      "Received Customer Champion award",
       "Received the Department Champion Award.",
-      "Received Team Champion Award.",
+      "Received Team Champion Award(4 times)",
       "Received appreciation from customers.",
       "Designed and implemented a GRPC endpoint within an established microservice architecture.",
       "Contributed in Identity and Access Management(IAM) service enhancements and migration initiatives."
