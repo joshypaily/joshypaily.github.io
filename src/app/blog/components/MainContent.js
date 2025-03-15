@@ -120,7 +120,8 @@ function Author({ authors }) {
         alignItems: "center",
         justifyContent: "space-between",
         padding: "16px"
-      }}>
+      }}
+    >
       <Box sx={{ display: "flex", flexDirection: "row", gap: 1, alignItems: "center" }}>
         <AvatarGroup max={3}>
           {authors.map((author, index) => (
@@ -199,7 +200,8 @@ export default function MainContent() {
           gap: 1,
           width: { xs: "100%", md: "fit-content" },
           overflow: "auto"
-        }}>
+        }}
+      >
         <Search />
         <IconButton size="small" aria-label="RSS feed">
           <RssFeedRoundedIcon />
@@ -214,14 +216,16 @@ export default function MainContent() {
           alignItems: { xs: "start", md: "center" },
           gap: 4,
           overflow: "auto"
-        }}>
+        }}
+      >
         <Box
           sx={{
             display: "inline-flex",
             flexDirection: "row",
             gap: 3,
             overflow: "auto"
-          }}>
+          }}
+        >
           <Chip onClick={handleClick} size="medium" label="All categories" />
           <Chip
             onClick={handleClick}
@@ -267,7 +271,8 @@ export default function MainContent() {
             gap: 1,
             width: { xs: "100%", md: "fit-content" },
             overflow: "auto"
-          }}>
+          }}
+        >
           <Search />
           <IconButton size="small" aria-label="RSS feed">
             <RssFeedRoundedIcon />
@@ -281,7 +286,8 @@ export default function MainContent() {
             onFocus={() => handleFocus(0)}
             onBlur={handleBlur}
             tabIndex={0}
-            className={focusedCardIndex === 0 ? "Mui-focused" : ""}>
+            className={focusedCardIndex === 0 ? "Mui-focused" : ""}
+          >
             <CardMedia
               component="img"
               alt="green iguana"
@@ -312,7 +318,8 @@ export default function MainContent() {
             onFocus={() => handleFocus(1)}
             onBlur={handleBlur}
             tabIndex={0}
-            className={focusedCardIndex === 1 ? "Mui-focused" : ""}>
+            className={focusedCardIndex === 1 ? "Mui-focused" : ""}
+          >
             <CardMedia
               component="img"
               alt="green iguana"
@@ -344,7 +351,8 @@ export default function MainContent() {
             onBlur={handleBlur}
             tabIndex={0}
             className={focusedCardIndex === 2 ? "Mui-focused" : ""}
-            sx={{ height: "100%" }}>
+            sx={{ height: "100%" }}
+          >
             <CardMedia
               component="img"
               alt="green iguana"
@@ -376,14 +384,16 @@ export default function MainContent() {
               onBlur={handleBlur}
               tabIndex={0}
               className={focusedCardIndex === 3 ? "Mui-focused" : ""}
-              sx={{ height: "100%" }}>
+              sx={{ height: "100%" }}
+            >
               <SyledCardContent
                 sx={{
                   display: "flex",
                   flexDirection: "column",
                   justifyContent: "space-between",
                   height: "100%"
-                }}>
+                }}
+              >
                 <div>
                   <Typography gutterBottom variant="caption" component="div">
                     {cardData[3].tag}
@@ -404,14 +414,16 @@ export default function MainContent() {
               onBlur={handleBlur}
               tabIndex={0}
               className={focusedCardIndex === 4 ? "Mui-focused" : ""}
-              sx={{ height: "100%" }}>
+              sx={{ height: "100%" }}
+            >
               <SyledCardContent
                 sx={{
                   display: "flex",
                   flexDirection: "column",
                   justifyContent: "space-between",
                   height: "100%"
-                }}>
+                }}
+              >
                 <div>
                   <Typography gutterBottom variant="caption" component="div">
                     {cardData[4].tag}
@@ -435,7 +447,8 @@ export default function MainContent() {
             onBlur={handleBlur}
             tabIndex={0}
             className={focusedCardIndex === 5 ? "Mui-focused" : ""}
-            sx={{ height: "100%" }}>
+            sx={{ height: "100%" }}
+          >
             <CardMedia
               component="img"
               alt="green iguana"

@@ -1,5 +1,5 @@
 import * as React from "react";
-import Grid from "@mui/material/Grid";
+import Grid from "@mui/material/Grid2";
 import Typography from "@mui/material/Typography";
 import List from "@mui/material/List";
 import ListItem from "@mui/material/ListItem";
@@ -14,7 +14,7 @@ export default function SvgIconsColor() {
       component="main"
       sx={{ display: "flex", flexDirection: "column", my: 16, gap: 4 }}>
       <Grid container spacing={2}>
-        <Grid item xs={12} md={6}>
+        <Grid size={{ xs: 12, md: 6 }}>
           <Typography sx={{ mt: 4, mb: 2 }} variant="h6" component="div">
             Contact
           </Typography>
