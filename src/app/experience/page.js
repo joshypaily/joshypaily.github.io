@@ -7,7 +7,7 @@ import { Container } from "@mui/material";
 const cardPosts = [
   {
     key: "cardPost1",
-    title: "Senior software engineer(21/02/2022 to Till date)",
+    title: "Lead software engineer(21/02/2022 to Till date)",
     subTitle: "IBS software, Carnival infopark, Kochi, Kerala, India.",
     description: [
       "Honored with the Debutant award.",
