@@ -20,21 +20,6 @@ export default function SvgIconsColor() {
         useFlexGap
         flexWrap="wrap"
         padding={2}>
-        {/* <Grid container direction="column" justifyContent="center" alignItems="center">
-          Java
-        </Grid>
-        <Grid container direction="column" justifyContent="center" alignItems="center">
-          Kotlin
-        </Grid>
-        <Grid container direction="column" justifyContent="center" alignItems="center">
-          HTML
-        </Grid>
-        <Grid container direction="column" justifyContent="center" alignItems="center">
-          CSS
-        </Grid>
-        <Grid container direction="column" justifyContent="center" alignItems="center">
-          JavaScript
-        </Grid> */}
         <Chip color="primary" label="Java" />
         <Chip color="primary" label="Kotlin" />
         <Chip color="primary" label="HTML" />
@@ -52,12 +37,6 @@ export default function SvgIconsColor() {
         useFlexGap
         flexWrap="wrap"
         padding={2}>
-        {/* <Grid container direction="column" justifyContent="center" alignItems="center">
-          Spring Boot
-        </Grid>
-        <Grid container direction="column" justifyContent="center" alignItems="center">
-          Spring MVC
-        </Grid> */}
         <Chip color="primary" label="Spring Boot" />
         <Chip color="primary" label="Spring MVC" />
       </Stack>
@@ -71,12 +50,6 @@ export default function SvgIconsColor() {
         useFlexGap
         flexWrap="wrap"
         padding={2}>
-        {/* <Grid container direction="column" justifyContent="center" alignItems="center">
-          MySQL DB
-        </Grid>
-        <Grid container direction="column" justifyContent="center" alignItems="center">
-          MongoDB
-        </Grid> */}
         <Chip color="primary" label="MySQL DB" />
         <Chip color="primary" label="MongoDB" />
       </Stack>
@@ -90,15 +63,6 @@ export default function SvgIconsColor() {
         useFlexGap
         flexWrap="wrap"
         padding={2}>
-        {/* <Grid container direction="column" justifyContent="center" alignItems="center">
-          Ubuntu
-        </Grid>
-        <Grid container direction="column" justifyContent="center" alignItems="center">
-          MacOS
-        </Grid>
-        <Grid container direction="column" justifyContent="center" alignItems="center">
-          WindowS
-        </Grid> */}
         <Chip color="primary" label="Ubuntu" />
         <Chip color="primary" label="MacOS" />
         <Chip color="primary" label="Windows" />
@@ -114,38 +78,8 @@ export default function SvgIconsColor() {
         useFlexGap
         flexWrap="wrap"
         padding={2}>
-        {/* <Grid container direction="column" justifyContent="center" alignItems="center">
-          Microservice
-        </Grid>
-        <Grid container direction="column" justifyContent="center" alignItems="center">
-          AWS EC2
-        </Grid>
-        <Grid container direction="column" justifyContent="center" alignItems="center">
-          Docker
-        </Grid>
-        <Grid container direction="column" justifyContent="center" alignItems="center">
-          Git
-        </Grid>
-        <Grid container direction="column" justifyContent="center" alignItems="center">
-          GRPC
-        </Grid>
-        <Grid container direction="column" justifyContent="center" alignItems="center">
-          REST API
-        </Grid>
-        <Grid container direction="column" justifyContent="center" alignItems="center">
-          Splunk
-        </Grid>
-        <Grid container direction="column" justifyContent="center" alignItems="center">
-          Apache ActiveMQ
-        </Grid>
-        <Grid container direction="column" justifyContent="center" alignItems="center">
-          GraphQL
-        </Grid>
-        <Grid container direction="column" justifyContent="center" alignItems="center">
-          Web hosting(PHP and Java)
-        </Grid> */}
         <Chip color="primary" label="Microservice" />
-        <Chip color="primary" label="AWS EC2" />
+        <Chip color="primary" label="AWS EC2,ECS" />
         <Chip color="primary" label="Docker" />
         <Chip color="primary" label="Git" />
         <Chip color="primary" label="GRPC" />
@@ -154,7 +88,29 @@ export default function SvgIconsColor() {
         <Chip color="primary" label="Apache ActiveMQ" />
         <Chip color="primary" label="GraphQL" />
         <Chip color="primary" label="Web hosting(PHP and Java)" />
+        <Chip color="primary" label="Kafka" />
       </Stack>
+      {/* <Grid item xs={12} md={6}>
+          <Typography sx={{ mt: 4, mb: 2 }} variant="h6" component="div">
+            Icon with text
+          </Typography>
+          <Demo>
+            <List dense={dense}>
+              {generate(
+                <ListItem>
+                  <ListItemIcon>
+                    <FolderIcon />
+                  </ListItemIcon>
+                  <ListItemText
+                    primary="Single-line item"
+                    secondary={secondary ? 'Secondary text' : null}
+                  />
+                </ListItem>,
+              )}
+            </List>
+          </Demo>
+        </Grid>
+      </Grid> */}
     </Container>
   );
 }
