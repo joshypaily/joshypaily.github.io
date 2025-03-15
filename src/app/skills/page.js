@@ -1,19 +1,19 @@
 "use client";
 
-import * as React from 'react';
-import { styled } from '@mui/material/styles';
-import Box from '@mui/material/Box';
-import List from '@mui/material/List';
-import ListItem from '@mui/material/ListItem';
-import ListItemIcon from '@mui/material/ListItemIcon';
-import ListItemText from '@mui/material/ListItemText';
-import Grid from '@mui/material/Grid2';
-import Typography from '@mui/material/Typography';
-import CodeIcon from '@mui/icons-material/code';
+import * as React from "react";
+import { styled } from "@mui/material/styles";
+import Box from "@mui/material/Box";
+import List from "@mui/material/List";
+import ListItem from "@mui/material/ListItem";
+import ListItemIcon from "@mui/material/ListItemIcon";
+import ListItemText from "@mui/material/ListItemText";
+import Grid from "@mui/material/Grid2";
+import Typography from "@mui/material/Typography";
+import CodeIcon from "@mui/icons-material/code";
 import Container from "@mui/material/Container";
 
-const Background = styled('div')(({ theme }) => ({
-  backgroundColor: theme.palette.background.paper,
+const Background = styled("div")(({ theme }) => ({
+  backgroundColor: theme.palette.background.paper
 }));
 
 export default function Skills() {
@@ -25,33 +25,27 @@ export default function Skills() {
 
       <Box sx={{ flexGrow: 1 }}>
         <Grid container spacing={6}>
-          {
-            skills.map((skill) => (
-              <Background key={skill.heading}>
-                <Grid xs={12} md={2}>
-                  <Typography sx={{ m: 1 }} variant="h5" component="div">
-                    {skill.heading}
-                  </Typography>
-                  {/* <Background> */}
-                  <List>
-                    {
-                      skill.items.map((item) => (
-                        <ListItem key={item.name}>
-                          <ListItemIcon>
-                            <CodeIcon sx={{ mr: 1 }} />
-                          </ListItemIcon>
-                          <ListItemText
-                            primary={item.name}
-                          />
-                        </ListItem>
-                      ))
-                    }
-                  </List>
-                  {/* </Background> */}
-                </Grid>
-              </Background>
-            ))
-          }
+          {skills.map((skill) => (
+            <Background key={skill.heading}>
+              <Grid size={{ xs: 12, md: 2 }}>
+                <Typography sx={{ m: 1 }} variant="h5" component="div">
+                  {skill.heading}
+                </Typography>
+                {/* <Background> */}
+                <List>
+                  {skill.items.map((item) => (
+                    <ListItem key={item.name}>
+                      <ListItemIcon>
+                        <CodeIcon sx={{ mr: 1 }} />
+                      </ListItemIcon>
+                      <ListItemText primary={item.name} />
+                    </ListItem>
+                  ))}
+                </List>
+                {/* </Background> */}
+              </Grid>
+            </Background>
+          ))}
         </Grid>
       </Box>
     </Container>
@@ -63,19 +57,19 @@ const skills = [
     heading: "Web Technologies",
     items: [
       {
-        name: "Java",
+        name: "Java"
       },
       {
-        name: "Kotlin",
+        name: "Kotlin"
       },
       {
-        name: "HTML",
+        name: "HTML"
       },
       {
-        name: "CSS",
+        name: "CSS"
       },
       {
-        name: "JavaScript",
+        name: "JavaScript"
       }
     ]
   },
@@ -83,27 +77,27 @@ const skills = [
     heading: "AWS",
     items: [
       {
-        name: "EC2",
+        name: "EC2"
       },
       {
-        name: "ECS",
+        name: "ECS"
       },
       {
-        name: "S3",
+        name: "S3"
       }
     ]
-  }, 
+  },
   {
     heading: "Platforms",
     items: [
       {
-        name: "Ubuntu",
+        name: "Ubuntu"
       },
       {
-        name: "MacOS",
+        name: "MacOS"
       },
       {
-        name: "Windows",
+        name: "Windows"
       }
     ]
   },
@@ -111,24 +105,24 @@ const skills = [
     heading: "Frameworks",
     items: [
       {
-        name: "Spring Boot",
+        name: "Spring Boot"
       },
       {
-        name: "Spring MVC",
+        name: "Spring MVC"
       }
     ]
   },
   {
-
     heading: "APIs",
     items: [
       {
-        name: "REST",
+        name: "REST"
       },
       {
-        name: "GraphQL",
-      }, {
-        name: "GRPC",
+        name: "GraphQL"
+      },
+      {
+        name: "GRPC"
       }
     ]
   },
@@ -136,10 +130,10 @@ const skills = [
     heading: "Databases",
     items: [
       {
-        name: "MySQL DB",
+        name: "MySQL DB"
       },
       {
-        name: "MongoDB",
+        name: "MongoDB"
       }
     ]
   },
@@ -147,10 +141,10 @@ const skills = [
     heading: "Monitoring tools",
     items: [
       {
-        name: "Splunk",
+        name: "Splunk"
       },
       {
-        name: "Datadog",
+        name: "Datadog"
       }
     ]
   },
@@ -158,20 +152,21 @@ const skills = [
     heading: "Testing",
     items: [
       {
-        name: "JUnit",
+        name: "JUnit"
       },
       {
-        name: "Mockito",
+        name: "Mockito"
       }
     ]
-  }, {
+  },
+  {
     heading: "Message Brokers",
     items: [
       {
-        name: "Kafka",
+        name: "Kafka"
       },
       {
-        name: "Apache ActiveMQ",
+        name: "Apache ActiveMQ"
       }
     ]
   },
@@ -179,13 +174,13 @@ const skills = [
     heading: "Others",
     items: [
       {
-        name: "Microservice",
+        name: "Microservice"
       },
       {
-        name: "Docker",
+        name: "Docker"
       },
       {
-        name: "Git",
+        name: "Git"
       }
     ]
   }

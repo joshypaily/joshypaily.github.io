@@ -1,6 +1,6 @@
 "use client";
 
-import Grid from "@mui/material/Grid";
+import Grid from "@mui/material/Grid2";
 import CardPost from "@/component/CardPost";
 import Timeline from "@mui/lab/Timeline";
 import TimelineSeparator from "@mui/lab/TimelineSeparator";

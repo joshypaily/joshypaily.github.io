@@ -29,8 +29,8 @@ export default function Footer() {
           display: "flex",
           // flexDirection: "column",
           // alignItems: "center",
-           flexDirection: 'column',
-            justifyContent: 'flex-end',
+          flexDirection: "column",
+          justifyContent: "flex-end"
           // gap: { xs: 4, sm: 8 },
           // py: { xs: 8, sm: 10 },
           // textAlign: { sm: "center", md: "left" }
@@ -57,7 +57,8 @@ export default function Footer() {
               size="small"
               href="https://github.com/joshypaily/joshypaily.github.io"
               aria-label="GitHub"
-              sx={{ alignSelf: "center" }}>
+              sx={{ alignSelf: "center" }}
+            >
               <FacebookIcon />
             </IconButton>
             {/* <IconButton
@@ -73,7 +74,8 @@ export default function Footer() {
               size="small"
               href="https://www.linkedin.com/in/joshypaily"
               aria-label="LinkedIn"
-              sx={{ alignSelf: "center" }}>
+              sx={{ alignSelf: "center" }}
+            >
               <LinkedInIcon />
             </IconButton>
           </Stack>

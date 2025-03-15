@@ -14,6 +14,9 @@
   "plugins": ["react", "react-hooks"],
   "rules": {
     "react/react-in-jsx-scope": "off",
-    "quotes": "off"
+    "quotes": "off",
+    "prettier/prettier": ["error", {
+      "endOfLine": "auto"
+    }]
   }
-}  
+}

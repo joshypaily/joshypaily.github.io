@@ -71,7 +71,8 @@ function ResponsiveAppBar() {
               onClose={handleCloseNavMenu}
               sx={{
                 display: { xs: "block", md: "none" }
-              }}>
+              }}
+            >
               {sections.map((page) => (
                 <MenuItem key={page.title} onClick={handleCloseNavMenu}>
                   <Link href={page.url} key={page.title}>
@@ -86,7 +87,8 @@ function ResponsiveAppBar() {
               <Button
                 key={page.title}
                 onClick={handleCloseNavMenu}
-                sx={{ my: 2, color: page.colour, display: "block" }}>
+                sx={{ my: 2, color: page.colour, display: "block" }}
+              >
                 <Link href={page.url} key={page.title}>
                   {page.title}
                 </Link>

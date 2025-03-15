@@ -52,7 +52,8 @@ export default function ColorModeIconDropdown(props) {
         aria-controls={open ? "color-scheme-menu" : undefined}
         aria-haspopup="true"
         aria-expanded={open ? "true" : undefined}
-        {...props}>
+        {...props}
+      >
         {icon}
       </IconButton>
       <Menu
@@ -71,7 +72,8 @@ export default function ColorModeIconDropdown(props) {
           }
         }}
         transformOrigin={{ horizontal: "right", vertical: "top" }}
-        anchorOrigin={{ horizontal: "right", vertical: "bottom" }}>
+        anchorOrigin={{ horizontal: "right", vertical: "bottom" }}
+      >
         <MenuItem selected={mode === "system"} onClick={handleMode("system")}>
           System
         </MenuItem>

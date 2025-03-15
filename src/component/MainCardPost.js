@@ -2,7 +2,7 @@ import * as React from "react";
 import PropTypes from "prop-types";
 import Paper from "@mui/material/Paper";
 import Typography from "@mui/material/Typography";
-import Grid from "@mui/material/Grid";
+import Grid from "@mui/material/Grid2";
 import Box from "@mui/material/Box";
 
 function MainCardPost(props) {
@@ -11,7 +11,7 @@ function MainCardPost(props) {
   let leftImageSection;
   if (card.isLeftImageRequired) {
     leftImageSection = (
-      <Grid item md={card.leftMd}>
+      <Grid md={card.leftMd}>
         <img
           srcSet={card.leftImageSrcSet}
           src={card.leftImageSrc}
@@ -48,7 +48,7 @@ function MainCardPost(props) {
       />
       <Grid container>
         {/* if (card.isLeftImageRequired) {
-          <Grid item md={card.leftMd}>
+          <Grid md={card.leftMd}>
             <img
                     srcSet={card.leftImageSrcSet}
                     src={card.leftImageSrc}
@@ -58,7 +58,7 @@ function MainCardPost(props) {
           </Grid>
         } */}
         {leftImageSection}
-        <Grid item md={card.rightMd}>
+        <Grid md={card.rightMd}>
           <Box
             sx={{
               position: "relative",
