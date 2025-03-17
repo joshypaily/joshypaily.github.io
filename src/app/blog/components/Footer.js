@@ -34,7 +34,8 @@ export default function Footer() {
           // gap: { xs: 4, sm: 8 },
           // py: { xs: 8, sm: 10 },
           // textAlign: { sm: "center", md: "left" }
-        }}>
+        }}
+      >
         <Box
           sx={{
             display: "flex",
@@ -43,7 +44,8 @@ export default function Footer() {
             width: "100%",
             borderTop: "1px solid",
             borderColor: "divider"
-          }}>
+          }}
+        >
           <div>
             <Copyright />
           </div>
@@ -51,7 +53,8 @@ export default function Footer() {
             direction="row"
             spacing={1}
             useFlexGap
-            sx={{ justifyContent: "left", color: "text.secondary" }}>
+            sx={{ justifyContent: "left", color: "text.secondary" }}
+          >
             <IconButton
               color="inherit"
               size="small"

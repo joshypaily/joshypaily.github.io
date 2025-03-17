@@ -87,7 +87,8 @@ export default function Education() {
           [`& .${timelineOppositeContentClasses.root}`]: {
             flex: 0.2
           }
-        }}>
+        }}
+      >
         {cardPosts.map((post) => (
           <TimelineItem key={post.key}>
             <TimelineOppositeContent>{post.year}</TimelineOppositeContent>

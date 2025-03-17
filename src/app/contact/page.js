@@ -12,7 +12,8 @@ export default function SvgIconsColor() {
     <Container
       maxWidth="lg"
       component="main"
-      sx={{ display: "flex", flexDirection: "column", my: 16, gap: 4 }}>
+      sx={{ display: "flex", flexDirection: "column", my: 16, gap: 4 }}
+    >
       <Grid container spacing={2}>
         <Grid size={{ xs: 12, md: 6 }}>
           <Typography sx={{ mt: 4, mb: 2 }} variant="h6" component="div">

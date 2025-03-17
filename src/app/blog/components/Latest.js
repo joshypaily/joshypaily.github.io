@@ -145,7 +145,8 @@ function Author({ authors }) {
         gap: 2,
         alignItems: "center",
         justifyContent: "space-between"
-      }}>
+      }}
+    >
       <Box sx={{ display: "flex", flexDirection: "row", gap: 1, alignItems: "center" }}>
         <AvatarGroup max={3}>
           {authors.map((author, index) => (
@@ -199,7 +200,8 @@ export default function Latest() {
                 justifyContent: "space-between",
                 gap: 1,
                 height: "100%"
-              }}>
+              }}
+            >
               <Typography gutterBottom variant="caption" component="div">
                 {article.tag}
               </Typography>
@@ -209,7 +211,8 @@ export default function Latest() {
                 onFocus={() => handleFocus(index)}
                 onBlur={handleBlur}
                 tabIndex={0}
-                className={focusedCardIndex === index ? "Mui-focused" : ""}>
+                className={focusedCardIndex === index ? "Mui-focused" : ""}
+              >
                 {article.title}
                 <NavigateNextRoundedIcon className="arrow" sx={{ fontSize: "1rem" }} />
               </TitleTypography>

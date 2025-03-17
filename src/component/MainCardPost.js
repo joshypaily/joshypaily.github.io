@@ -33,7 +33,8 @@ function MainCardPost(props) {
         backgroundRepeat: "no-repeat",
         backgroundPosition: "center",
         backgroundImage: `url(${card.backgroundImage})`
-      }}>
+      }}
+    >
       {/* Increase the priority of the hero background image */}
       {<img style={{ display: "none" }} src={card.backgroundImage} />}
       <Box
@@ -64,7 +65,8 @@ function MainCardPost(props) {
               position: "relative",
               p: { xs: 3, md: 6 },
               pr: { md: 0 }
-            }}>
+            }}
+          >
             <Typography component="h5" variant="h4" color="inherit" gutterBottom>
               {card.title}
             </Typography>
