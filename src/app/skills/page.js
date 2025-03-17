@@ -21,8 +21,8 @@ export default function Skills() {
     <Container
       maxWidth="lg"
       component="main"
-      sx={{ display: "flex", flexDirection: "column", my: 16, gap: 4 }}>
-
+      sx={{ display: "flex", flexDirection: "column", my: 16, gap: 4 }}
+    >
       <Box sx={{ flexGrow: 1 }}>
         <Grid container spacing={6}>
           {skills.map((skill) => (
@@ -184,4 +184,4 @@ const skills = [
       }
     ]
   }
-]
+];

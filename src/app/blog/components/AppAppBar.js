@@ -76,7 +76,8 @@ export default function AppAppBar() {
         bgcolor: "transparent",
         backgroundImage: "none",
         mt: "calc(var(--template-frame-height, 0px) + 28px)"
-      }}>
+      }}
+    >
       <Container maxWidth="lg">
         <StyledToolbar variant="dense" disableGutters>
           <Box sx={{ flexGrow: 1, display: "flex", alignItems: "center", px: 0 }}>
@@ -114,7 +115,8 @@ export default function AppAppBar() {
               display: { xs: "none", md: "flex" },
               gap: 1,
               alignItems: "center"
-            }}>
+            }}
+          >
             <ColorModeIconDropdown />
           </Box>
           <Box sx={{ display: { xs: "flex", md: "none" }, gap: 1 }}>
@@ -130,13 +132,15 @@ export default function AppAppBar() {
                 sx: {
                   top: "var(--template-frame-height, 0px)"
                 }
-              }}>
+              }}
+            >
               <Box sx={{ p: 2, backgroundColor: "background.default" }}>
                 <Box
                   sx={{
                     display: "flex",
                     justifyContent: "flex-end"
-                  }}>
+                  }}
+                >
                   <IconButton onClick={toggleDrawer(false)}>
                     <CloseRoundedIcon />
                   </IconButton>
