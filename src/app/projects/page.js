@@ -1,8 +1,9 @@
 "use client";
 
-import Grid from "@mui/material/Grid2";
 import CardPost from "@/component/CardPost";
-import Container from "@mui/material/Container";
+import Container from 'react-bootstrap/Container';
+import Row from 'react-bootstrap/Row';
+import Col from 'react-bootstrap/Col';
 
 const cardPosts = [
   {
@@ -35,15 +36,14 @@ const cardPosts = [
 export default function Experience() {
   return (
     <Container
-      maxWidth="lg"
       component="main"
       sx={{ display: "flex", flexDirection: "column", my: 16, gap: 4 }}
     >
-      <Grid container spacing={6}>
-        {cardPosts.map((post) => (
-          <CardPost key={post.title} post={post} />
-        ))}
-      </Grid>
+        <Row>
+          {cardPosts.map((post) => (
+            <CardPost key={post.title} post={post} />
+          ))}
+        </Row>
     </Container>
   );
 }

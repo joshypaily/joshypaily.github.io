@@ -188,7 +188,7 @@ export default function MainContent() {
   return (
     <Box sx={{ display: "flex", flexDirection: "column", gap: 4 }}>
       <div>
-        <Typography variant="h1" gutterBottom>
+        <Typography variant="h1" >
           Blog
         </Typography>
         <Typography>Stay in the loop with the latest about our products</Typography>
@@ -299,13 +299,13 @@ export default function MainContent() {
               }}
             />
             <SyledCardContent>
-              <Typography gutterBottom variant="caption" component="div">
+              <Typography  variant="caption" component="div">
                 {cardData[0].tag}
               </Typography>
-              <Typography gutterBottom variant="h6" component="div">
+              <Typography  variant="h6" component="div">
                 {cardData[0].title}
               </Typography>
-              <StyledTypography variant="body2" color="text.secondary" gutterBottom>
+              <StyledTypography variant="body2" color="text.secondary" >
                 {cardData[0].description}
               </StyledTypography>
             </SyledCardContent>
@@ -331,13 +331,13 @@ export default function MainContent() {
               }}
             />
             <SyledCardContent>
-              <Typography gutterBottom variant="caption" component="div">
+              <Typography  variant="caption" component="div">
                 {cardData[1].tag}
               </Typography>
-              <Typography gutterBottom variant="h6" component="div">
+              <Typography  variant="h6" component="div">
                 {cardData[1].title}
               </Typography>
-              <StyledTypography variant="body2" color="text.secondary" gutterBottom>
+              <StyledTypography variant="body2" color="text.secondary" >
                 {cardData[1].description}
               </StyledTypography>
             </SyledCardContent>
@@ -363,13 +363,13 @@ export default function MainContent() {
               }}
             />
             <SyledCardContent>
-              <Typography gutterBottom variant="caption" component="div">
+              <Typography  variant="caption" component="div">
                 {cardData[2].tag}
               </Typography>
-              <Typography gutterBottom variant="h6" component="div">
+              <Typography  variant="h6" component="div">
                 {cardData[2].title}
               </Typography>
-              <StyledTypography variant="body2" color="text.secondary" gutterBottom>
+              <StyledTypography variant="body2" color="text.secondary" >
                 {cardData[2].description}
               </StyledTypography>
             </SyledCardContent>
@@ -395,13 +395,13 @@ export default function MainContent() {
                 }}
               >
                 <div>
-                  <Typography gutterBottom variant="caption" component="div">
+                  <Typography  variant="caption" component="div">
                     {cardData[3].tag}
                   </Typography>
-                  <Typography gutterBottom variant="h6" component="div">
+                  <Typography  variant="h6" component="div">
                     {cardData[3].title}
                   </Typography>
-                  <StyledTypography variant="body2" color="text.secondary" gutterBottom>
+                  <StyledTypography variant="body2" color="text.secondary" >
                     {cardData[3].description}
                   </StyledTypography>
                 </div>
@@ -425,13 +425,13 @@ export default function MainContent() {
                 }}
               >
                 <div>
-                  <Typography gutterBottom variant="caption" component="div">
+                  <Typography  variant="caption" component="div">
                     {cardData[4].tag}
                   </Typography>
-                  <Typography gutterBottom variant="h6" component="div">
+                  <Typography  variant="h6" component="div">
                     {cardData[4].title}
                   </Typography>
-                  <StyledTypography variant="body2" color="text.secondary" gutterBottom>
+                  <StyledTypography variant="body2" color="text.secondary" >
                     {cardData[4].description}
                   </StyledTypography>
                 </div>
@@ -459,13 +459,13 @@ export default function MainContent() {
               }}
             />
             <SyledCardContent>
-              <Typography gutterBottom variant="caption" component="div">
+              <Typography  variant="caption" component="div">
                 {cardData[5].tag}
               </Typography>
-              <Typography gutterBottom variant="h6" component="div">
+              <Typography  variant="h6" component="div">
                 {cardData[5].title}
               </Typography>
-              <StyledTypography variant="body2" color="text.secondary" gutterBottom>
+              <StyledTypography variant="body2" color="text.secondary" >
                 {cardData[5].description}
               </StyledTypography>
             </SyledCardContent>

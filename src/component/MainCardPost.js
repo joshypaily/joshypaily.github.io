@@ -1,9 +1,12 @@
 import * as React from "react";
 import PropTypes from "prop-types";
-import Paper from "@mui/material/Paper";
-import Typography from "@mui/material/Typography";
-import Grid from "@mui/material/Grid2";
-import Box from "@mui/material/Box";
+// import Paper from "@mui/material/Paper";
+import { Card } from 'react-bootstrap';
+
+// import Typography from "@mui/material/Typography";
+// import Grid from "@mui/material/Grid2";
+import { Container, Row, Col } from 'react-bootstrap';
+// import Box from "@mui/material/Box";
 
 function MainCardPost(props) {
   const { post: card } = props;
@@ -11,19 +14,23 @@ function MainCardPost(props) {
   let leftImageSection;
   if (card.isLeftImageRequired) {
     leftImageSection = (
-      <Grid md={card.leftMd}>
-        <img
+      <Container>
+        <div  className="g-{card.leftMd}">
+          <Col md={card.leftMd}> 
+            <img
           srcSet={card.leftImageSrcSet}
           src={card.leftImageSrc}
           style={{ maxWidth: "100%" }}
-          loading="lazy"
-        />
-      </Grid>
+          loading="lazy"/>
+          </Col>
+
+        </div>
+      </Container>
     );
   }
 
   return (
-    <Paper
+    <Card
       sx={{
         position: "relative",
         backgroundColor: "grey.800",
@@ -37,7 +44,7 @@ function MainCardPost(props) {
     >
       {/* Increase the priority of the hero background image */}
       {<img style={{ display: "none" }} src={card.backgroundImage} />}
-      <Box
+      <div
         sx={{
           position: "absolute",
           top: 0,
@@ -47,7 +54,7 @@ function MainCardPost(props) {
           backgroundColor: "rgba(0,0,0,.3)"
         }}
       />
-      <Grid container>
+      <div>
         {/* if (card.isLeftImageRequired) {
           <Grid md={card.leftMd}>
             <img
@@ -59,27 +66,24 @@ function MainCardPost(props) {
           </Grid>
         } */}
         {leftImageSection}
-        <Grid md={card.rightMd}>
-          <Box
+        <div md={card.rightMd}>
+          <div
             sx={{
               position: "relative",
               p: { xs: 3, md: 6 },
               pr: { md: 0 }
             }}
           >
-            <Typography component="h5" variant="h4" color="inherit" gutterBottom>
+            <div component="h5" variant="h4" color="inherit" >
               {card.title}
-            </Typography>
-            <Typography variant="h6" color="inherit" paragraph>
+            </div>
+            <div variant="h6" color="inherit">
               {card.description}
-            </Typography>
-            {/* <Link variant="subtitle1" href="#">
-              {post.linkText}
-            </Link> */}
-          </Box>
-        </Grid>
-      </Grid>
-    </Paper>
+            </div>
+          </div>
+        </div>
+      </div>
+    </Card>
   );
 }
 

@@ -1,16 +1,11 @@
 "use client";
 
-import Grid from "@mui/material/Grid2";
+
 import CardPost from "@/component/CardPost";
-import Timeline from "@mui/lab/Timeline";
-import TimelineSeparator from "@mui/lab/TimelineSeparator";
-import TimelineConnector from "@mui/lab/TimelineConnector";
-import TimelineContent from "@mui/lab/TimelineContent";
-import TimelineDot from "@mui/lab/TimelineDot";
-import TimelineItem from "@mui/lab/TimelineItem";
-import TimelineOppositeContent, {
-  timelineOppositeContentClasses
-} from "@mui/lab/TimelineOppositeContent";
+import React from "react";
+import { Card, Container } from 'react-bootstrap';
+import './achievements.css'
+
 
 const cardPosts = [
   {
@@ -81,28 +76,87 @@ const cardPosts = [
 
 export default function Education() {
   return (
-    <main>
-      <Timeline
-        sx={{
-          [`& .${timelineOppositeContentClasses.root}`]: {
-            flex: 0.2
-          }
-        }}
-      >
-        {cardPosts.map((post) => (
-          <TimelineItem key={post.key}>
-            <TimelineOppositeContent>{post.year}</TimelineOppositeContent>
-            <TimelineSeparator>
-              <TimelineDot /> <TimelineConnector />
-            </TimelineSeparator>
-            <TimelineContent>
-              <Grid container spacing={6}>
-                <CardPost key={post.title} post={post} />
-              </Grid>
-            </TimelineContent>
-          </TimelineItem>
-        ))}
-      </Timeline>
-    </main>
+    <Container fluid className="py-5" style={{ backgroundColor: "#F0F2F5" }}>
+      <div className="main-timeline">
+        <div className="timeline left">
+          <Card>
+            <Card.Body className="p-4">
+              <h3>2017</h3>
+              <p className="mb-0">
+                Lorem ipsum dolor sit amet, quo ei simul congue exerci, ad nec
+                admodum perfecto mnesarchum, vim ea mazim fierent detracto. Ea
+                quis iuvaret expetendis his, te elit voluptua dignissim per,
+                habeo iusto primis ea eam.
+              </p>
+            </Card.Body>
+          </Card>
+        </div>
+        <div className="timeline right">
+          <Card>
+            <Card.Body className="p-4">
+              <h3>2016</h3>
+              <p className="mb-0">
+                Lorem ipsum dolor sit amet, quo ei simul congue exerci, ad nec
+                admodum perfecto mnesarchum, vim ea mazim fierent detracto. Ea
+                quis iuvaret expetendis his, te elit voluptua dignissim per,
+                habeo iusto primis ea eam.
+              </p>
+            </Card.Body>
+          </Card>
+        </div>
+        <div className="timeline left">
+          <Card>
+            <Card.Body className="p-4">
+              <h3>2015</h3>
+              <p className="mb-0">
+                Lorem ipsum dolor sit amet, quo ei simul congue exerci, ad nec
+                admodum perfecto mnesarchum, vim ea mazim fierent detracto. Ea
+                quis iuvaret expetendis his, te elit voluptua dignissim per,
+                habeo iusto primis ea eam.
+              </p>
+            </Card.Body>
+          </Card>
+        </div>
+        <div className="timeline right">
+          <Card>
+            <Card.Body className="p-4">
+              <h3>2012</h3>
+              <p className="mb-0">
+                Lorem ipsum dolor sit amet, quo ei simul congue exerci, ad nec
+                admodum perfecto mnesarchum, vim ea mazim fierent detracto. Ea
+                quis iuvaret expetendis his, te elit voluptua dignissim per,
+                habeo iusto primis ea eam.
+              </p>
+            </Card.Body>
+          </Card>
+        </div>
+        <div className="timeline left">
+          <Card>
+            <Card.Body className="p-4">
+              <h3>2011</h3>
+              <p className="mb-0">
+                Lorem ipsum dolor sit amet, quo ei simul congue exerci, ad nec
+                admodum perfecto mnesarchum, vim ea mazim fierent detracto. Ea
+                quis iuvaret expetendis his, te elit voluptua dignissim per,
+                habeo iusto primis ea eam.
+              </p>
+            </Card.Body>
+          </Card>
+        </div>
+        <div className="timeline right">
+          <Card>
+            <Card.Body className="p-4">
+              <h3>2007</h3>
+              <p className="mb-0">
+                Lorem ipsum dolor sit amet, quo ei simul congue exerci, ad nec
+                admodum perfecto mnesarchum, vim ea mazim fierent detracto. Ea
+                quis iuvaret expetendis his, te elit voluptua dignissim per,
+                habeo iusto primis ea eam.
+              </p>
+            </Card.Body>
+          </Card>
+        </div>
+      </div>
+    </Container>
   );
 }
