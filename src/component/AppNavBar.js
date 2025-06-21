@@ -13,23 +13,23 @@ const navItemColour = "";
 const sections = [
   { title: "About", url: "/", colour: navItemColour },
   { title: "Experience", url: "/experience", colour: navItemColour },
+  { title: "Projects", url: "/projects", colour: navItemColour },
   { title: "Skills", url: "/skills", colour: navItemColour },
   { title: "Achievements", url: "/achievements", colour: navItemColour },
   { title: "Education", url: "/education", colour: navItemColour },
-  { title: "Projects", url: "/projects", colour: navItemColour },
   { title: "Contact", url: "/contact", colour: navItemColour }
 ];
 
 export default function AppAppBar() {
-  const pathname = usePathname();
-  const [theme, setTheme] = useState("light");
-  const [expanded, setExpanded] = useState(false);
 
-  // Highlight active section
-  const navSections = sections.map((section) => ({
-    ...section,
-    colour: section.url === pathname ? "white" : navItemColour
-  }));
+  for (let i = 0; i < sections.length; i++) {
+    if (sections[i].url === usePathname()) {
+      sections[i].colour = "white";
+    } else {
+      sections[i].colour = navItemColour;
+    }
+  }
+  const [theme, setTheme] = useState("light");
 
   // Load saved theme from localStorage on mount
   useEffect(() => {
@@ -45,30 +45,17 @@ export default function AppAppBar() {
     localStorage.setItem("theme", newTheme);
     document.body.className = newTheme === "dark" ? "bg-dark text-light" : "bg-light text-dark";
   };
-  // Collapse navbar after clicking a link
-  const handleNavClick = () => setExpanded(false);
 
   return (
-    <Navbar
-      expand="lg"
-      className="bg-body-tertiary"
-      data-bs-theme="dark"
-      expanded={expanded}
-      onToggle={setExpanded}
-    >
+    <Navbar expand="lg" className="bg-body-tertiary" data-bs-theme="dark">
       <Container fluid>
-        <Navbar.Brand href="/">Joshy&apos;s Portfolio</Navbar.Brand>
-        <Navbar.Toggle aria-controls="navbarScroll" onClick={() => setExpanded((prev) => !prev)} />
+        <Navbar.Brand href="#">Joshy&apos;s Portfolio</Navbar.Brand>
+        <Navbar.Toggle aria-controls="navbarScroll" />
         <Navbar.Collapse id="navbarScroll">
-          <Nav className="me-auto my-2 my-lg-0" navbarScroll>
-            {navSections.map((page) => (
+          <Nav className="me-auto my-2 my-lg-0" style={{ maxHeight: "100px" }} navbarScroll>
+            {sections.map((page) => (
               <Link key={"l" + page.title} href={page.url} passHref legacyBehavior>
-                <Nav.Link
-                  as="a"
-                  key={page.title}
-                  style={{ color: page.colour }}
-                  onClick={handleNavClick}
-                >
+                <Nav.Link as="a" key={page.title} style={{ color: page.colour }}>
                   {page.title}
                 </Nav.Link>
               </Link>

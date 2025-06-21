@@ -5,7 +5,17 @@ export default function Footer() {
   return (
     <footer className="bg-dark text-light py-3 mt-auto">
       <Container className="text-center">
-        <small>Joshy`&apos;s Portfolio &copy; {new Date().getFullYear()}</small>
+        <small>
+          &copy; {new Date().getFullYear()} &nbsp;
+          <a
+            href="https://mui.com/"
+            className="text-info text-decoration-none"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            Sitemark
+          </a>
+        </small>
       </Container>
     </footer>
   );
