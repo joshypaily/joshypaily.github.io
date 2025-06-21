@@ -37,11 +37,8 @@ const cardPosts = [
 
 export default function Education() {
   return (
-    <Container
-      component="main"
-      sx={{ display: "flex", flexDirection: "column", my: 16, gap: 4 }}
-    >
-      <div container spacing={6}>
+    <Container component="main" sx={{ display: "flex", flexDirection: "column", my: 16, gap: 4 }}>
+      <div spacing={6}>
         {cardPosts.map((post) => (
           <CardPost key={post.title} post={post} />
         ))}

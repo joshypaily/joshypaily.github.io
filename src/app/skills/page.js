@@ -1,49 +1,35 @@
 "use client";
 
 import * as React from "react";
-import Container from 'react-bootstrap/Container';
-import ListGroup from 'react-bootstrap/ListGroup';
-
+import Container from "react-bootstrap/Container";
+import ListGroup from "react-bootstrap/ListGroup";
+import Row from "react-bootstrap/Row";
+import Col from "react-bootstrap/Col";
 
 export default function Skills() {
   return (
-    <Container
-      component="main"
-      sx={{ display: "flex", flexDirection: "column", my: 16, gap: 4 }}
-    >
-      <div sx={{ flexGrow: 1 }}>
-        <div container spacing={6}>
-          {skills.map((skill) => (
-            // <Background key={skill.heading}>
-              <div size={{ xs: 6, md: 2 }}>
-                <div sx={{ m: 1 }} variant="h5" component="div">
-                  {skill.heading}
-                </div>
-                {/* <Background> */}
-                <ListGroup >
-                  {skill.items.map((item) => (
-                    <ListGroup.Item key={item.name}>
-                      {/* <ListItemIcon>
-                        <CodeIcon sx={{ mr: 1 }} />
-                      </ListItemIcon>
-                      <ListItemText primary={item.name} /> */}
-                      {item.name}
-                    </ListGroup.Item>
-                  ))}
-                </ListGroup>
-                {/* </Background> */}
-              </div>
-            // </Background>
-          ))}
-        </div>
-      </div>
+    <Container as="main" className="my-5">
+      <Row>
+        {skills.map((skill) => (
+          <Col key={skill.heading} xs={12} sm={6} md={4} lg={3} className="mb-4">
+            <div className="skill-card h-100 d-flex flex-column">
+              <div className="h5 mb-3">{skill.heading}</div>
+              <ListGroup className="flex-grow-1">
+                {skill.items.map((item) => (
+                  <ListGroup.Item key={item.name}>{item.name}</ListGroup.Item>
+                ))}
+              </ListGroup>
+            </div>
+          </Col>
+        ))}
+      </Row>
     </Container>
   );
 }
 
 const skills = [
   {
-    heading: "Web Technologies",
+    heading: "Languages",
     items: [
       {
         name: "Java"
@@ -51,6 +37,28 @@ const skills = [
       {
         name: "Kotlin"
       },
+      {
+        name: "JavaScript"
+      }
+    ]
+  },
+  {
+    heading: "DevOps",
+    items: [
+      {
+        name: "Docker"
+      },
+      {
+        name: "Kubernetes"
+      },
+      {
+        name: "CI/CD"
+      }
+    ]
+  },
+  {
+    heading: "Web Technologies",
+    items: [
       {
         name: "HTML"
       },
@@ -77,20 +85,6 @@ const skills = [
     ]
   },
   {
-    heading: "Platforms",
-    items: [
-      {
-        name: "Ubuntu"
-      },
-      {
-        name: "MacOS"
-      },
-      {
-        name: "Windows"
-      }
-    ]
-  },
-  {
     heading: "Frameworks",
     items: [
       {
@@ -98,20 +92,6 @@ const skills = [
       },
       {
         name: "Spring MVC"
-      }
-    ]
-  },
-  {
-    heading: "APIs",
-    items: [
-      {
-        name: "REST"
-      },
-      {
-        name: "GraphQL"
-      },
-      {
-        name: "GRPC"
       }
     ]
   },
@@ -156,6 +136,34 @@ const skills = [
       },
       {
         name: "Apache ActiveMQ"
+      }
+    ]
+  },
+  {
+    heading: "Platforms",
+    items: [
+      {
+        name: "Ubuntu"
+      },
+      {
+        name: "MacOS"
+      },
+      {
+        name: "Windows"
+      }
+    ]
+  },
+  {
+    heading: "APIs",
+    items: [
+      {
+        name: "REST"
+      },
+      {
+        name: "GraphQL"
+      },
+      {
+        name: "GRPC"
       }
     ]
   },

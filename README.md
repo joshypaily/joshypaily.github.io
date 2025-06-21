@@ -3,9 +3,10 @@ This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next
 ## Getting Started
 
 Install all the dependencies in your project
+
 ```bash
 
-npm install       
+npm install
 ```
 
 Then, run the development server:
@@ -14,13 +15,16 @@ Then, run the development server:
 
 npm run dev
 ```
+
 OR
+
 ```bash
 
 yarn dev
 ```
 
 OR
+
 ```bash
 
 pnpm dev
@@ -29,9 +33,13 @@ bun dev
 ```
 
 Verify static page build (verification)
-Run 
-```bash
+Run
 
+```bash
+#format
+npx prettier --write .
+
+# build
 npx --no-install next build
 ```
 

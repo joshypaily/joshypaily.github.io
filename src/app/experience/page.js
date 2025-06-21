@@ -1,10 +1,8 @@
 "use client";
 
 import CardPost from "@/component/CardPost";
-import Container from 'react-bootstrap/Container';
-import Row from 'react-bootstrap/Row';
-import Col from 'react-bootstrap/Col';
-
+import Container from "react-bootstrap/Container";
+import Row from "react-bootstrap/Row";
 
 const cardPosts = [
   {
@@ -51,10 +49,7 @@ const cardPosts = [
 
 export default function Experience() {
   return (
-    <Container
-      component="main"
-      sx={{ display: "flex", flexDirection: "column", my: 16, gap: 4 }}
-    >
+    <Container component="main" sx={{ display: "flex", flexDirection: "column", my: 16, gap: 4 }}>
       <Row>
         {cardPosts.map((post) => (
           <CardPost key={post.title} post={post} />
