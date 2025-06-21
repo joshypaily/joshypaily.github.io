@@ -1,34 +1,49 @@
-import * as React from "react";
-import Grid from "@mui/material/Grid2";
-import Typography from "@mui/material/Typography";
-import List from "@mui/material/List";
-import ListItem from "@mui/material/ListItem";
-import Link from "@mui/material/Link";
-import LinkedInIcon from "@mui/icons-material/LinkedIn";
-import { Container } from "@mui/material";
+"use client";
 
-export default function SvgIconsColor() {
+import { Container, Row, Col, Card, ListGroup } from "react-bootstrap";
+import { FaLinkedin, FaGithub } from "react-icons/fa";
+
+export default function ContactPage() {
   return (
-    <Container
-      maxWidth="lg"
-      component="main"
-      sx={{ display: "flex", flexDirection: "column", my: 16, gap: 4 }}
-    >
-      <Grid container spacing={2}>
-        <Grid size={{ xs: 12, md: 6 }}>
-          <Typography sx={{ mt: 4, mb: 2 }} variant="h6" component="div">
-            Contact
-          </Typography>
-          <List>
-            <ListItem>
-              <LinkedInIcon color="primary" fontSize="large" />:
-              <Link href="https://www.linkedin.com/in/joshypaily/" target="_blank" variant="body2">
-                {"https://www.linkedin.com/in/joshypaily"}
-              </Link>
-            </ListItem>
-          </List>
-        </Grid>
-      </Grid>
+    <Container as="main" className="py-5" style={{ minHeight: "70vh" }}>
+      <Row className="justify-content-center mb-5">
+        <Col xs={12} md={8} lg={6}>
+          <Card className="shadow-lg border-0">
+            <Card.Body className="text-center p-5">
+              <Card.Title as="h2" className="mb-4" style={{ fontWeight: 700, fontSize: "2rem" }}>
+                Contact Me
+              </Card.Title>
+              <Card.Text className="mb-4" style={{ color: "#555" }}>
+                Feel free to reach out for collaboration, project inquiries, or just to connect!
+              </Card.Text>
+              <ListGroup variant="flush" className="mb-4">
+                <ListGroup.Item className="d-flex align-items-center justify-content-center border-0 bg-transparent">
+                  <FaLinkedin className="me-2 text-primary" size={22} />
+                  <a
+                    href="https://www.linkedin.com/in/joshypaily/"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="text-decoration-none text-primary"
+                  >
+                    linkedin.com/in/joshypaily
+                  </a>
+                </ListGroup.Item>
+                <ListGroup.Item className="d-flex align-items-center justify-content-center border-0 bg-transparent">
+                  <FaGithub className="me-2 text-dark" size={22} />
+                  <a
+                    href="https://github.com/joshypaily"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="text-decoration-none text-dark"
+                  >
+                    github.com/joshypaily
+                  </a>
+                </ListGroup.Item>
+              </ListGroup>
+            </Card.Body>
+          </Card>
+        </Col>
+      </Row>
     </Container>
   );
 }

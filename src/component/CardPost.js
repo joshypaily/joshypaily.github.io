@@ -1,14 +1,7 @@
 import * as React from "react";
 import PropTypes from "prop-types";
-import Typography from "@mui/material/Typography";
-import Grid from "@mui/material/Grid2";
-import Card from "@mui/material/Card";
-import CardActionArea from "@mui/material/CardActionArea";
-import CardContent from "@mui/material/CardContent";
-import List from "@mui/material/List";
-import { ListItem, ListItemButton, ListItemIcon, ListItemText } from "@mui/material";
-import StarIcon from "@mui/icons-material/Star";
-import Link from "@mui/material/Link";
+import { Col, Card, ListGroup } from "react-bootstrap";
+import { FaStar } from "react-icons/fa";
 
 function CardPost(props) {
   const { post: card } = props;
@@ -16,51 +9,39 @@ function CardPost(props) {
   let linkSection;
   if (card.isMoreInfoLinkRequired) {
     linkSection = (
-      <Typography variant="subtitle1" color="primary">
-        <Link href={card.moreInfoLink.url} underline="always" target="_blank">
+      <div color="primary">
+        <Card.Link href={card.moreInfoLink.url} underline="always" target="_blank">
           {card.moreInfoLink.label}
-        </Link>
-      </Typography>
+        </Card.Link>
+      </div>
     );
   }
 
   return (
-    <Grid item xs={12}>
-      <CardActionArea component="a" href="#">
-        <Card sx={{ display: "flex" }}>
-          <CardContent sx={{ flex: 1 }}>
-            <Typography component="h2" variant="h5">
-              {card.title}
-            </Typography>
-            <Typography variant="subtitle1" color="text.secondary">
-              {card.subTitle}
-            </Typography>
-            <List>
-              {card.description.map((description, i) => (
-                <ListItem disablePadding sx={{ display: "list-item" }} key={"des" + i + card.key}>
-                  <ListItemButton>
-                    <ListItemIcon>
-                      <StarIcon />
-                    </ListItemIcon>
-                    <ListItemText primary={description} />
-                  </ListItemButton>
-                </ListItem>
-              ))}
-            </List>
-            {/* <Typography variant="subtitle1" paragraph>
-              {card.description}
-            </Typography> */}
-            {linkSection}
-          </CardContent>
-          {/* <CardMedia
-            component="img"
-            sx={{ width: 160, display: { xs: 'none', sm: 'block' } }}
-            image={card.image}
-            alt={card.imageLabel}
-          /> */}
-        </Card>
-      </CardActionArea>
-    </Grid>
+    <Col xs={12}>
+      <Card className="d-flex flex-row mb-3">
+        <Card.Body className="flex-grow-1">
+          <Card.Title as="h2" className="h5">
+            {card.title}
+          </Card.Title>
+          <Card.Subtitle className="mb-2 text-muted">{card.subTitle}</Card.Subtitle>
+
+          <ListGroup variant="flush">
+            {card.description.map((description, i) => (
+              <ListGroup.Item key={"des" + i + card.key} className="d-flex align-items-start">
+                <span className="">
+                  <span className="me-2 mt-1 text-warning">
+                    <FaStar />
+                  </span>
+                  {description}
+                </span>
+              </ListGroup.Item>
+            ))}
+          </ListGroup>
+          {linkSection}
+        </Card.Body>
+      </Card>
+    </Col>
   );
 }
 

@@ -1,9 +1,8 @@
 import * as React from "react";
 import PropTypes from "prop-types";
-import Paper from "@mui/material/Paper";
-import Typography from "@mui/material/Typography";
-import Grid from "@mui/material/Grid2";
-import Box from "@mui/material/Box";
+import { Card } from "react-bootstrap";
+
+import { Container, Col } from "react-bootstrap";
 
 function MainCardPost(props) {
   const { post: card } = props;
@@ -11,19 +10,23 @@ function MainCardPost(props) {
   let leftImageSection;
   if (card.isLeftImageRequired) {
     leftImageSection = (
-      <Grid md={card.leftMd}>
-        <img
-          srcSet={card.leftImageSrcSet}
-          src={card.leftImageSrc}
-          style={{ maxWidth: "100%" }}
-          loading="lazy"
-        />
-      </Grid>
+      <Container>
+        <div className="g-{card.leftMd}">
+          <Col md={card.leftMd}>
+            <img
+              srcSet={card.leftImageSrcSet}
+              src={card.leftImageSrc}
+              style={{ maxWidth: "100%" }}
+              loading="lazy"
+            />
+          </Col>
+        </div>
+      </Container>
     );
   }
 
   return (
-    <Paper
+    <Card
       sx={{
         position: "relative",
         backgroundColor: "grey.800",
@@ -37,49 +40,16 @@ function MainCardPost(props) {
     >
       {/* Increase the priority of the hero background image */}
       {<img style={{ display: "none" }} src={card.backgroundImage} />}
-      <Box
-        sx={{
-          position: "absolute",
-          top: 0,
-          bottom: 0,
-          right: 0,
-          left: 0,
-          backgroundColor: "rgba(0,0,0,.3)"
-        }}
-      />
-      <Grid container>
-        {/* if (card.isLeftImageRequired) {
-          <Grid md={card.leftMd}>
-            <img
-                    srcSet={card.leftImageSrcSet}
-                    src={card.leftImageSrc}
-                    style={{maxWidth : '100%'}}
-                    loading="lazy"
-                  />
-          </Grid>
-        } */}
+      <div>
         {leftImageSection}
-        <Grid md={card.rightMd}>
-          <Box
-            sx={{
-              position: "relative",
-              p: { xs: 3, md: 6 },
-              pr: { md: 0 }
-            }}
-          >
-            <Typography component="h5" variant="h4" color="inherit" gutterBottom>
-              {card.title}
-            </Typography>
-            <Typography variant="h6" color="inherit" paragraph>
-              {card.description}
-            </Typography>
-            {/* <Link variant="subtitle1" href="#">
-              {post.linkText}
-            </Link> */}
-          </Box>
-        </Grid>
-      </Grid>
-    </Paper>
+        <div>
+          <div>
+            <div color="inherit">{card.title}</div>
+            <div color="inherit">{card.description}</div>
+          </div>
+        </div>
+      </div>
+    </Card>
   );
 }
 
@@ -97,17 +67,3 @@ MainCardPost.propTypes = {
 };
 
 export default MainCardPost;
-
-// <Box sx={{ width: 500 }}>
-// <BottomNavigation
-//   showLabels
-//   value={value}
-//   onChange={(event, newValue) => {
-//     setValue(newValue);
-//   }}
-// >
-//   <BottomNavigationAction label="Recents" icon={<RestoreIcon />} />
-//   <BottomNavigationAction label="Favorites" icon={<FavoriteIcon />} />
-//   <BottomNavigationAction label="Nearby" icon={<LocationOnIcon />} />
-// </BottomNavigation>
-// </Box>

@@ -1,12 +1,12 @@
 "use client";
 
-import Grid from "@mui/material/Grid2";
 import CardPost from "@/component/CardPost";
-import Container from "@mui/material/Container";
+import Container from "react-bootstrap/Container";
+import Row from "react-bootstrap/Row";
 
 const cardPosts = [
   {
-    key: "cardPost1",
+    key: "pub-sub-model",
     title: "A pub-sub model application using Apache ActiveMQ broker",
     subTitle:
       "A sample project to create MQTT(Message Queuing Telemetry Transport) messaging using spring boot and eclipse paho(java client). The apache-activemq-5.18.3 used as a message broker here.",
@@ -23,27 +23,43 @@ const cardPosts = [
     }
   },
   {
-    key: "cardPost2",
-    title: "More projects added later",
-    subTitle: "",
-    description: ["Development inprogress. Stay tuned.."],
+    key: "spring-scurity",
+    title: "spring-security-role-based-authorization",
+    subTitle: "A sample application to demonstrate role based authorization using spring security",
+    description: [
+      "This is a sample application to demonstrate role based authorization using spring security.",
+      "There are two roles defined in this application, ADMIN and USER.",
+      "The admin can access all the endpoints, but the user can only access the /user endpoint."
+    ],
     backgroundImage: "/bg.avif",
-    isMoreInfoLinkRequired: false
+    isMoreInfoLinkRequired: true,
+    moreInfoLink: {
+      url: "https://github.com/joshypaily/spring-security-role-based-authorization",
+      label: "See more -> github.com/joshypaily/spring-security-role-based-authorization"
+    }
+  },
+  {
+    key: "More projects in the github",
+    title: "Check more on my github account",
+    subTitle: "",
+    description: [],
+    backgroundImage: "/bg.avif",
+    isMoreInfoLinkRequired: true,
+    moreInfoLink: {
+      url: "https://github.com/joshypaily?tab=repositories",
+      label: "See more -> https://github.com/joshypaily?tab=repositories"
+    }
   }
 ];
 
 export default function Experience() {
   return (
-    <Container
-      maxWidth="lg"
-      component="main"
-      sx={{ display: "flex", flexDirection: "column", my: 16, gap: 4 }}
-    >
-      <Grid container spacing={6}>
+    <Container component="main" sx={{ display: "flex", flexDirection: "column", my: 16, gap: 4 }}>
+      <Row>
         {cardPosts.map((post) => (
           <CardPost key={post.title} post={post} />
         ))}
-      </Grid>
+      </Row>
     </Container>
   );
 }
