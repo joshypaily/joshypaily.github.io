@@ -13,7 +13,7 @@ export default function Achievements() {
     setModalShow(true);
   };
   const handleCloseModal = () => setModalShow(false);
-  
+
   return (
     <Container fluid className="py-5" style={{ backgroundColor: "#F0F2F5" }}>
       <h2 className="mb-5 text-center">Achievements</h2>
