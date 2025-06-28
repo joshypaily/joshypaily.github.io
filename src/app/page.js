@@ -108,11 +108,11 @@ export default function Home() {
                 Joshy Paily
               </Card.Title>
               <Card.Text style={{ fontSize: "1.1rem", color: "#333" }}>
-                A software engineer with five years of experience, showcasing a proven track record
-                in the information technology and services sector. Proficient in Java, Kotlin,
-                Spring Boot and microservices with a knack for crafting applications from front-end
-                to back-end. Possesses extensive expertise across all development layers, including
-                UI, database, system design, analysis, and implementation, adhering to clean code
+                A software engineer with 6+ years of experience, showcasing a proven track record in
+                the information technology and services sector. Proficient in Java, Kotlin, Spring
+                Boot and microservices with a knack for crafting applications from front-end to
+                back-end. Possesses extensive expertise across all development layers, including UI,
+                database, system design, analysis, and implementation, adhering to clean code
                 principles.
               </Card.Text>
             </Card.Body>
@@ -121,18 +121,6 @@ export default function Home() {
       </Row>
       {/* Highlights Section */}
       <Row className="mt-5">
-        {/* Projects Highlight */}
-        <Col xs={12} md={6} lg={3} className="mb-4">
-          <Card className="h-100 shadow-sm">
-            <Card.Body>
-              <Card.Title>Featured Project</Card.Title>
-              <Card.Text>A pub-sub model application using Apache ActiveMQ broker</Card.Text>
-              <a href="/projects" className="btn btn-outline-primary btn-sm mt-2">
-                View Projects
-              </a>
-            </Card.Body>
-          </Card>
-        </Col>
         {/* Skills Highlight */}
         <Col xs={12} md={6} lg={3} className="mb-4">
           <Card className="h-100 shadow-sm">
@@ -165,6 +153,18 @@ export default function Home() {
               <Card.Text>Hacktrix-2017, Web Design Competitions (1st Prize)</Card.Text>
               <a href="/achievements" className="btn btn-outline-primary btn-sm mt-2">
                 View Achievements
+              </a>
+            </Card.Body>
+          </Card>
+        </Col>
+        {/* Projects Highlight */}
+        <Col xs={12} md={6} lg={3} className="mb-4">
+          <Card className="h-100 shadow-sm">
+            <Card.Body>
+              <Card.Title>Featured Project</Card.Title>
+              <Card.Text>A pub-sub model application using Apache ActiveMQ broker</Card.Text>
+              <a href="/projects" className="btn btn-outline-primary btn-sm mt-2">
+                View Projects
               </a>
             </Card.Body>
           </Card>

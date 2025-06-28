@@ -3,74 +3,7 @@
 import React, { useState } from "react";
 import { Card, Container } from "react-bootstrap";
 import "./achievements.css";
-
-const cardPosts = [
-  {
-    key: "cardPost-Hacktrix-2017",
-    year: "2017",
-    title: "Hacktrix-2017",
-    subTitle: "",
-    description: ["Coordinated Hacktrix-2017, an ethical hacking workshop."],
-    backgroundImage: "/achievement/hacktrix.jpg",
-    isMoreInfoLinkRequired: false,
-    viewMoreImageLink: ""
-  },
-  {
-    key: "cardPost22013",
-    year: "2013",
-    title: "Web designing competation",
-    subTitle: "",
-    description: [
-      "Participated in web designing competition in 5th Ernakulam revenue district school Kalolsavam 2013."
-    ],
-    backgroundImage: "/achievement/default.png",
-    isMoreInfoLinkRequired: false
-  },
-  {
-    key: "cardPost1-web-design2013",
-    year: "2013",
-    title: "Web Designing Competation",
-    subTitle: "First prize",
-    description: [
-      "Secured 1st prize for web designing competition in koothattukulam sub-district IT fair conducted on 2013."
-    ],
-    backgroundImage: "/achievement/default.png",
-    isMoreInfoLinkRequired: false
-  },
-  {
-    key: "cardPost22012",
-    year: "2012",
-    title: "Web designing competation",
-    subTitle: "",
-    description: [
-      "Participated in web designing competition in 4th Ernakulam revenue district school  Kalolsavam 2012."
-    ],
-    backgroundImage: "/achievement/default.png",
-    isMoreInfoLinkRequired: false
-  },
-  {
-    key: "cardPost1-web-design2012",
-    year: "2012",
-    title: "Web Designing Competation",
-    subTitle: "First prize",
-    description: [
-      "Secured 1st prize for web designing competition in koothattukulam sub-district IT fair conducted on 2012."
-    ],
-    backgroundImage: "/achievement/default.png",
-    isMoreInfoLinkRequired: false
-  },
-  {
-    key: "cardPost1-web-design2011",
-    year: "2011",
-    title: "Web Designing Competation",
-    subTitle: "First prize",
-    description: [
-      "Secured 1st prize for web designing competition in koothattukulam sub-district IT fair conducted on 2011."
-    ],
-    backgroundImage: "/achievement/default.png",
-    isMoreInfoLinkRequired: false
-  }
-];
+import cardPosts from "../../data/achievementData";
 
 export default function Achievements() {
   const [modalShow, setModalShow] = useState(false);
@@ -93,7 +26,7 @@ export default function Achievements() {
                   variant="top"
                   src={post.backgroundImage}
                   style={{
-                    height: 120,
+                    height: 250,
                     objectFit: "cover",
                     borderRadius: "0.5rem 0.5rem 0 0"
                   }}
@@ -107,7 +40,7 @@ export default function Achievements() {
                     <Card.Subtitle className="mb-2 text-muted">{post.subTitle}</Card.Subtitle>
                   )}
                   <Card.Text className="mb-2">
-                    <strong>Year:</strong> {post.year}
+                    <strong>Date:</strong> {post.date}
                   </Card.Text>
                   {post.description &&
                     post.description.map((desc, i) => (
