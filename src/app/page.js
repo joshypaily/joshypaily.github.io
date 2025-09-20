@@ -210,48 +210,41 @@ export default function Home() {
 							onSelect={handleCarouselSelect}
 						>
 							{Array.from({ length: Math.ceil(recommendations.length / 3) }).map((_, pageIdx) => (
-								<Carousel.Item key={pageIdx}>
-									<Row className="justify-content-center align-items-stretch">
-										{recommendations.slice(pageIdx * 3, pageIdx * 3 + 3).map((rec, idx) => (
-											<Col
-												xs={12}
-												md={6}
-												lg={4}
-												key={rec.name + idx}
-												className="mb-4 d-flex align-items-stretch"
-											>
-												<Card
-													className="mx-auto shadow-sm border-info h-100 d-flex flex-column"
-													style={{ minHeight: 320 }}
-												>
-													<Card.Body className="d-flex flex-column justify-content-start">
-														<div>
-															<Card.Text style={{ fontStyle: "italic" }}>{rec.text}</Card.Text>
+							<Carousel.Item key={pageIdx}>
+								<div className="d-flex flex-column gap-3">
+									{recommendations.slice(pageIdx * 3, pageIdx * 3 + 3).map((rec, idx) => (
+										<Card key={rec.name + idx} className="w-100 shadow-sm recommendation-row-card">
+											<Card.Body>
+												<Row className="g-0 align-items-start">
+													<Col xs={12} md={2} className="text-center pe-3">
+														<div className="avatar-placeholder rounded-circle bg-primary text-white d-inline-flex align-items-center justify-content-center" style={{ width: 64, height: 64, fontWeight: 700 }}>
+															{(rec.name || 'JP').split(' ').map(n => n ? n[0] : '').slice(0,2).join('')}
 														</div>
-														<div>
-															<Card.Subtitle
-																className="mt-3 mb-0 text-info"
-																style={{ fontWeight: 600 }}
-															>
-																{rec.name}
-															</Card.Subtitle>
-															<Card.Text className="mb-0" style={{ fontSize: "0.95rem" }}>
-																{rec.headline}
-															</Card.Text>
+													</Col>
+													<Col xs={12} md={10} className="pt-1 pt-md-0 d-flex flex-column">
+														<div className="meta">
+															<Card.Subtitle className="mb-1 text-info" style={{ fontWeight: 600 }}>{rec.name}</Card.Subtitle>
+															<Card.Text className="mb-0" style={{ fontSize: '0.95rem' }}>{rec.headline}</Card.Text>
+															<Card.Text className="mb-0" style={{ fontSize: '0.85rem', color: '#888' }}>{rec.caption}</Card.Text>
+														</div>
+														<div className="description mt-3">
 															<Card.Text
-																className="mb-0"
-																style={{ fontSize: "0.85rem", color: "#888" }}
+																className="recommendation-quote"
+																style={{ fontStyle: 'italic', whiteSpace: 'pre-wrap', cursor: rec.text && rec.text.length > 220 ? 'help' : 'auto' }}
+																title={rec.text && rec.text.length > 220 ? rec.text : undefined}
+																aria-label={rec.text && rec.text.length > 220 ? rec.text : undefined}
 															>
-																{rec.caption}
+																{rec.text}
 															</Card.Text>
 														</div>
-													</Card.Body>
-												</Card>
-											</Col>
-										))}
-									</Row>
-								</Carousel.Item>
-							))}
+													</Col>
+												</Row>
+											</Card.Body>
+										</Card>
+									))}
+								</div>
+							</Carousel.Item>
+						))}
 						</Carousel>
 						{/* Custom Controls outside the cards */}
 						<button
