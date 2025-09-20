@@ -8,7 +8,7 @@ const cardPosts = [
   {
     key: "cardPost1",
     title: "Lead software engineer(21/02/2022 to Till date)",
-    subTitle: "IBS software, Carnival infopark, Kochi, Kerala, India.",
+    subTitle: "IBS software Campus, Kochi, Kerala, India.",
     description: [
       "Honored with the Debutant award.",
       "Received Customer Champion award",
