@@ -49,9 +49,6 @@ export default function AppAppBar() {
   // Collapse navbar after clicking a link
   const handleNavClick = () => setExpanded(false);
 
-  // Collapse navbar after clicking a link
-  const handleNavClick = () => setExpanded(false);
-
   return (
     <Navbar
       expand="lg"
