@@ -45,9 +45,7 @@ export default function AppAppBar() {
     localStorage.setItem("theme", newTheme);
     document.body.className = newTheme === "dark" ? "bg-dark text-light" : "bg-light text-dark";
   };
-  // Collapse navbar after clicking a link
-  const handleNavClick = () => setExpanded(false);
-
+  
   // Collapse navbar after clicking a link
   const handleNavClick = () => setExpanded(false);
 
