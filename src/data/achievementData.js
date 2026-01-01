@@ -113,7 +113,7 @@ const cardPosts = [
   },
   {
     key: "cardPost-Hacktrix-2017",
-    year: "2017",
+    date: "2017",
     title: "Hacktrix-2017",
     subTitle: "",
     description: ["Coordinated Hacktrix-2017, an ethical hacking workshop."],
@@ -123,58 +123,87 @@ const cardPosts = [
   },
   {
     key: "cardPost22013",
-    year: "2013",
+    date: "2013",
     title: "Web designing competation",
     subTitle: "",
     description: [
       "Participated in web designing competition in 5th Ernakulam revenue district school Kalolsavam 2013."
     ],
-    backgroundImage: "/achievement/default.png",
-    isMoreInfoLinkRequired: false
+    backgroundImage: "/achievement/fifth-revenue.jpg",
+    isMoreInfoLinkRequired: false,
+     viewMoreImageLink: "/achievement/fifth-revenue.jpg"
   },
   {
     key: "cardPost1-web-design2013",
-    year: "2013",
+    date: "2013",
     title: "Web Designing Competation",
     subTitle: "First prize",
     description: [
       "Secured 1st prize for web designing competition in koothattukulam sub-district IT fair conducted on 2013."
     ],
-    backgroundImage: "/achievement/default.png",
-    isMoreInfoLinkRequired: false
+    backgroundImage: "/achievement/it-fair-2013.jpg",
+    isMoreInfoLinkRequired: false,
+     viewMoreImageLink: "/achievement/it-fair-2013.jpg"
   },
   {
     key: "cardPost22012",
-    year: "2012",
+    date: "2012",
     title: "Web designing competation",
     subTitle: "",
     description: [
       "Participated in web designing competition in 4th Ernakulam revenue district school  Kalolsavam 2012."
     ],
-    backgroundImage: "/achievement/default.png",
-    isMoreInfoLinkRequired: false
+    backgroundImage: "/achievement/fourth-revenue.jpg",
+    isMoreInfoLinkRequired: false,
+     viewMoreImageLink: "/achievement/fourth-revenue.jpg"
   },
   {
     key: "cardPost1-web-design2012",
-    year: "2012",
+    date: "2012",
     title: "Web Designing Competation",
     subTitle: "First prize",
     description: [
       "Secured 1st prize for web designing competition in koothattukulam sub-district IT fair conducted on 2012."
     ],
-    backgroundImage: "/achievement/default.png",
-    isMoreInfoLinkRequired: false
+    backgroundImage: "/achievement/it-fair-2012.jpg",
+    isMoreInfoLinkRequired: false,
+    viewMoreImageLink: "/achievement/it-fair-2012.jpg"
+  },
+  {
+    key: "cardPost1-web-it-champion-2012",
+    date: "2012",
+    title: "IT Champion 2022",
+    subTitle: "",
+    description: [
+      "Secured 80% marks in IT-Champion examination conducted by G-TEC Kerala in 2012."
+    ],
+    backgroundImage: "/achievement/g-tec.jpg",
+    isMoreInfoLinkRequired: false,
+    viewMoreImageLink: "/achievement/g-tec.jpg"
   },
   {
     key: "cardPost1-web-design2011",
-    year: "2011",
+    date: "2011",
     title: "Web Designing Competation",
     subTitle: "First prize",
     description: [
       "Secured 1st prize for web designing competition in koothattukulam sub-district IT fair conducted on 2011."
     ],
-    backgroundImage: "/achievement/default.png",
-    isMoreInfoLinkRequired: false
+    backgroundImage: "/achievement/it-fair-2011.jpg",
+    isMoreInfoLinkRequired: false,
+    viewMoreImageLink: "/achievement/it-fair-2011.jpg"
+  },
+   {
+    key: "cardPost1-web-up-mark",
+    date: "2009",
+    title: "Upper Primary School Computer Course",
+    subTitle: "",
+    description: [
+      "Secured 90% marks in Upper Primary School Computer Course."
+    ],
+    backgroundImage: "/achievement/up_school_mark.jpg",
+    isMoreInfoLinkRequired: false,
+    viewMoreImageLink: "/achievement/up_school_mark.jpg"
   }
 ];
 
