@@ -9,6 +9,28 @@ import { useEffect, useState } from "react";
 
 const recommendations = [
 	{
+		name: "Sunitta Hatte",
+		headline: "Team Manager",
+		caption: "December 15, 2025, Sunita was Joshy's client",
+		text: `Joshy was part of the offshore team supporting services developed by the team I managed at Expedia. His strong technical skills, natural curiosity, quick learning ability, and self-reliance enabled him to resolve issues effectively. He proactively collaborated with cross-functional teams to drive resolutions and consistently demonstrated an interest in technically challenging problems.
+Joshy will be a great asset to any team.`,
+	},
+	{
+		name: "Razine Bensari",
+		headline: "Software Engineer at Expedia Group",
+		caption: "October 26, 2025, Razine worked with Joshy on the same team",
+		text: `I worked alongside Joshy on the semantician where he was a pillar of our support and platform stability efforts. Joshy drives systemic improvement; he significantly enhanced our taxonomy and implemented key stability that directly benefited our customers (other teams at expedia, dev, and managers) and team. A high-impact performer and a real pleasure to work with.
+A solid engineer on all fronts.`,
+	},
+	{
+		name: "Sandy Lao",
+		headline: "Software Developer at Expedia Group",
+		caption: "October 11, 2025, Sandy worked with Joshy on the same team",
+		text: `I  had the pleasure of working with Joshy, and I can confidently say he's an exceptional teammate. He's incredibly hardworking, dedicated and always goes the extra mile, even lending a hand after working hours when needed.
+		
+Joshy's support and guidance have had a big impact on my own growth and I truly appreciate everything I've learned from him. He communicates clearly about task progress, collaborates effectively and constantly looks for ways to improve how things are done.`,
+	},
+	{
 		name: "Pranati Mahato",
 		headline: "Sr. Engineering Manager at Expedia Group",
 		caption: "July 13, 2025, Pranati worked with Joshy on the same team",
